@@ -59,6 +59,7 @@ const Login = () => {
               <Button variant="text" className={loginModule.forgotBtn}>
                 Forgot Password ?
               </Button>
+              
               <div className={loginModule.socialAccouts}>
                 <ul>
                   <li> Login with</li>
@@ -76,12 +77,13 @@ const Login = () => {
             </div>
           </Paper>
         </Box>
+        
         <Image
           src="/../public/images/img.png"
           alt="Picture of the author"
           width={600}
           height={300}
-        />
+        ></Image>
       </div>
     </div>
   );

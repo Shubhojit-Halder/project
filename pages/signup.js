@@ -6,8 +6,19 @@ import LockIcon from "@mui/icons-material/Lock";
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Button from "@mui/material/Button";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import WcIcon from "@mui/icons-material/Wc";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 const Signup = () => {
+  const [sex, setSex] = React.useState("");
+
+  const handleChange = (event) => {
+    setSex(event.target.value);
+  };
   return (
     <div className={signUpModule.mainDiv}>
       <div className={signUpModule.inputs_login}>
@@ -30,9 +41,9 @@ const Signup = () => {
                 Enter details to continue
               </p>
 
-              <Box sx={{ "& > :not(style)": { m: 1.5 } }}>
+              <Box sx={{ "& > :not(style)": { m: 2 } }}>
                 <div className={signUpModule.inputfield}>
-                  <Box sx={{ display: "block", alignItems: "flex-end" }}>
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
                     <AccountCircle sx={{ mr: 2, my: 2 }} />
                     <TextField
                       required
@@ -42,8 +53,8 @@ const Signup = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "block", alignItems: "flex-end" }}>
-                    <AccountCircle sx={{ mr: 2, my: 2 }} />
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
+                    <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-required"
@@ -52,7 +63,10 @@ const Signup = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "block", alignItems: "flex-end" }}>
+                  <Box
+                    className={signUpModule.box}
+                    sx={{ display: "inline-block", alignItems: "flex-end" }}
+                  >
                     <LockIcon sx={{ mr: 2, my: 2 }} />
                     <TextField
                       required
@@ -62,8 +76,15 @@ const Signup = () => {
                       autoComplete="current-password"
                     />
                   </Box>
-                  <Box sx={{ display: "block", alignItems: "flex-end" }}>
-                    <LockIcon sx={{ mr: 2, my: 2 }} />
+                  <Box
+                    sx={{
+                      display: "inline-block",
+                      alignItems: "flex-end",
+                      mr: 2,
+                      my: 2,
+                    }}
+                  >
+                    <LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-password-input"
@@ -72,14 +93,58 @@ const Signup = () => {
                       autoComplete="current-password"
                     />
                   </Box>
+                  <Box
+                    sx={{
+                      display: "inline-block",
+                      alignItems: "flex-end",
+                      mr: 2,
+                      my: 2,
+                    }}
+                  >
+                    <LockIcon sx={{ mr: 2, my: 2 }} />
+                    <TextField
+                      required
+                      id="outlined-mobile-input"
+                      label="Mobile No."
+                      type="password"
+                      autoComplete="off"
+                    />
+                  </Box>
+                  <Box sx={{ mr: 2, display: "inline-block" }}>
+                    <WcIcon sx={{ mr: 2, my: 2 }} />
+                    <FormControl sx={{ minWidth: 222 }}>
+                      <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+                      <Select
+                        required
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={sex}
+                        label="sex"
+                        onChange={handleChange}
+                      >
+                        <MenuItem value={"Male"}>Male</MenuItem>
+                        <MenuItem value={"Female"}>Female</MenuItem>
+                        <MenuItem value={"Others"}>Others</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Box>
                 </div>
-                <Button className={signUpModule.signupBtn} variant="contained">
-                  LogIn
-                </Button>
+                <div className={signUpModule.signupBtnDiv}>
+                  <Button
+                    className={signUpModule.signupBtn}
+                    variant="contained"
+                  >
+                    Signup
+                  </Button>
+                </div>
               </Box>
             </div>
           </Paper>
         </Box>
+        <div className={signUpModule.sidePara}>
+          <h1>Discover a new world with us.</h1>
+          <p>We're here to give you a better social media experience where you can learn and grow without losing a single bit of fun.</p>
+        </div>
       </div>
     </div>
   );
