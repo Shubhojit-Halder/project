@@ -68,3 +68,19 @@
     color: #e95c6e;
     transform: translateY(-7%);
 }
+
+@media(max-width:720px)
+{
+    .inputs_login{
+        width: 385px;
+    }
+    .img{
+        display: none;
+    }
+}
+@media(max-width:400px)
+{
+    .inputs_login{
+        /* margin-top: 100px; */
+    }
+}

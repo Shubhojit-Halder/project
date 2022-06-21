@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import WcIcon from "@mui/icons-material/Wc";
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 const Signup = () => {
@@ -35,7 +36,7 @@ const Signup = () => {
         >
           <Paper elevation={3}>
             <div className={signUpModule.design}>
-              <h1 className={signUpModule.brandName}>SocioBook</h1>
+              <h1 className={signUpModule.brandName}>HexaOverflow</h1>
               <h2>Let's get started !!</h2>
               <p className={signUpModule.signupPara}>
                 Enter details to continue
@@ -53,7 +54,7 @@ const Signup = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end",my:2 }}>
                     <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
@@ -113,7 +114,7 @@ const Signup = () => {
                   <Box sx={{ mr: 2, display: "inline-block" }}>
                     <WcIcon sx={{ mr: 2, my: 2 }} />
                     <FormControl sx={{ minWidth: 222 }}>
-                      <InputLabel id="demo-simple-select-label">Sex</InputLabel>
+                      <InputLabel id="demo-simple-select-label">Gender *</InputLabel>
                       <Select
                         required
                         labelId="demo-simple-select-label"
@@ -130,12 +131,14 @@ const Signup = () => {
                   </Box>
                 </div>
                 <div className={signUpModule.signupBtnDiv}>
+                <a href="./signup2">
                   <Button
                     className={signUpModule.signupBtn}
                     variant="contained"
                   >
-                    Signup
+                   Next <ArrowForwardIosRoundedIcon/>
                   </Button>
+                  </a>
                 </div>
               </Box>
             </div>

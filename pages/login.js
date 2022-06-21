@@ -28,7 +28,7 @@ const Login = () => {
         >
           <Paper elevation={3} className={loginModule.paper}>
             <div className={loginModule.design}>
-              <h1 className={loginModule.brandName}>SocioBook</h1>
+              <h1 className={loginModule.brandName}>HexaOverflow</h1>
               <h2>Welcome Back !!</h2>
               <p className={loginModule.logP}>Login to continue</p>
               <Box sx={{ "& > :not(style)": { m: 1.5 } }}>
@@ -83,6 +83,7 @@ const Login = () => {
           alt="Picture of the author"
           width={600}
           height={300}
+          className={loginModule.img}
         ></Image>
       </div>
     </div>
