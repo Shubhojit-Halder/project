@@ -35,12 +35,12 @@ const Signup2 = () => {
             flexWrap: "wrap",
             "& > :not(style)": {
               m: 1,
-              width: 600,
-              height: 530,
+              // width: 600,
+              // height: 530,
             },
           }}
         >
-          <Paper elevation={3}>
+          <Paper elevation={3} className={signUpModule2.input_box_container}>
             <div className={signUpModule2.design}>
               <h1 className={signUpModule2.brandName}>HexaOverflow</h1>
               <h2>Let's get started !!</h2>
@@ -50,7 +50,7 @@ const Signup2 = () => {
 
               <Box sx={{ "& > :not(style)": { m: 2 } }}>
                 <div className={signUpModule2.inputfield}>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end",ml:2 }}>
                     <LocationCityRoundedIcon sx={{ mr: 2, my: 2 }} />
                     <TextField
                       required
@@ -60,8 +60,8 @@ const Signup2 = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
-                    <CalendarMonthRoundedIcon sx={{ mr: 2, ml: 2, my: 2 }} />
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end",my:2,ml:2 }}>
+                    <CalendarMonthRoundedIcon className={signUpModule2.calender} sx={{ mr: 2,  my: 2 }} />
                     <TextField
                       required
                       id="outlined-required"
@@ -70,8 +70,8 @@ const Signup2 = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end",my:2 }}>
-                    <PasswordIcon sx={{ mr: 2, ml:18, my: 2 }} />
+                  <Box sx={{ display: "inline-block", alignItems: "flex-end",ml:2 }}>
+                    <PasswordIcon className={signUpModule2.passwordIcon} sx={{ mr: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-required"

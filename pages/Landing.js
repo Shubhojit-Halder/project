@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useDispatch, useSelector} from "react-redux"
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -10,8 +11,11 @@ import Button from "@mui/material/Button";
 import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-const Login = () => {
-
+import Component from "./Components";
+import Theme from "./features/Theme";
+const Landing = () => {
+  const color=useSelector((state)=>state.theme.color)
+  const secColor=useSelector((state)=>state.theme.secondaryColor)
   return (
     <div className={loginModule.mainDiv} >
       <div className={loginModule.inputs_login}>
@@ -27,10 +31,13 @@ const Login = () => {
             },
           }}
         >
-          <Paper elevation={3} className={loginModule.paper}>
+          <Paper elevation={3} className={loginModule.paper} >
             <div className={loginModule.design}>
-              <h1 className={loginModule.brandName}>HexaOverflow</h1>
+              <h1 className={loginModule.brandName} style={{backgroundColor:color,color:secColor}}>
+                HexaOverflow
+              </h1>
               <h2>Welcome Back !!</h2>
+              <Theme/>
               <p className={loginModule.logP}>Login to continue</p>
               <Box sx={{ "& > :not(style)": { m: 1.5 } }}>
                 <Box sx={{ display: "block", alignItems: "flex-end" }}>
@@ -79,16 +86,16 @@ const Login = () => {
           </Paper>
         </Box>
 
-            <Image
-              src="/../public/images/img.png"
-              alt="Picture of the author"
-              width={600}
-              height={300}
-              className={loginModule.img}
-            />
+        <Image
+          src="/../public/images/img.png"
+          alt="Picture of the author"
+          width={600}
+          height={300}
+          className={loginModule.img}
+        />
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Landing;
