@@ -1,21 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  color: "#ffffff",
-  secondaryColor:"rgb(62, 62, 255)"
-}
+	color: "black",
+	secondaryColor: "rgb(62, 62, 255)",
+};
 
 export const themeSlice = createSlice({
-  name: 'theme',
-  initialState,
-  reducers: {
-    changeTextColor: (state, action) => {
-      state.color= action.payload.color;
-      state.secondaryColor=action.payload.secondaryColor;
-    },
-  },
-})
+	name: "theme",
+	initialState,
+	reducers: {
+		changeTextColor: (state, action) => {
+			state.color = action.payload.color;
+			state.secondaryColor = action.payload.secondaryColor;
+		},
+	},
+});
 
-export const { changeTextColor } = themeSlice.actions
+export const { changeTextColor } = themeSlice.actions;
 
-export default themeSlice.reducer
+export default themeSlice.reducer;

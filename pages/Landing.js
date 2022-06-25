@@ -12,7 +12,9 @@ import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Component from "./Components";
-import Theme from "./features/Theme";
+// import Theme from "./features/Theme";
+import dynamic from "next/dynamic";
+const Theme = dynamic(()=>import("./features/Theme"),{ssr:false})
 const Landing = () => {
   const color=useSelector((state)=>state.theme.color)
   const secColor=useSelector((state)=>state.theme.secondaryColor)
@@ -37,8 +39,8 @@ const Landing = () => {
                 HexaOverflow
               </h1>
               <h2>Welcome Back !!</h2>
-              
-              <p className={loginModule.logP}>Login to continue <Theme/></p>
+              <Theme/>
+              <p className={loginModule.logP}>Login to continue</p>
               <Box sx={{ "& > :not(style)": { m: 1.5 } }}>
                 <Box sx={{ display: "block", alignItems: "flex-end" }}>
                   <AccountCircle sx={{ mr: 2, my: 2 }} />
