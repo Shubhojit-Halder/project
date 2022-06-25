@@ -18,7 +18,7 @@ const Landing = () => {
   const secColor=useSelector((state)=>state.theme.secondaryColor)
   return (
     <div className={loginModule.mainDiv} >
-      <div className={loginModule.inputs_login}>
+      <div className={loginModule.inputs_login} style={{backgroundColor:color,color:secColor}}>
         <Box
           className={loginModule.box}
           sx={{
@@ -32,13 +32,13 @@ const Landing = () => {
           }}
         >
           <Paper elevation={3} className={loginModule.paper} >
-            <div className={loginModule.design}>
-              <h1 className={loginModule.brandName} style={{backgroundColor:color,color:secColor}}>
+            <div className={loginModule.design} >
+              <h1 className={loginModule.brandName} >
                 HexaOverflow
               </h1>
               <h2>Welcome Back !!</h2>
-              <Theme/>
-              <p className={loginModule.logP}>Login to continue</p>
+              
+              <p className={loginModule.logP}>Login to continue <Theme/></p>
               <Box sx={{ "& > :not(style)": { m: 1.5 } }}>
                 <Box sx={{ display: "block", alignItems: "flex-end" }}>
                   <AccountCircle sx={{ mr: 2, my: 2 }} />
