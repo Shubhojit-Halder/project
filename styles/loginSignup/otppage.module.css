@@ -40,7 +40,7 @@
     font-family: 'El Messiri', sans-serif;
 }
 .design .signupPara{
-    margin: -30px 0px 20px 3px;
+    margin: -30px 0px 50px 3px;
     padding: 5px 12px;
     font-weight: 200;
     font-family: 'Quicksand', sans-serif;
@@ -52,8 +52,8 @@
     padding-top: 20px;
 }
 .sendOTPBTN{
-    width:250px;
-    margin-bottom: 10px;
+    width:270px;
+    margin: 0 0px 10px 0px;
 }
 .signupBtn{
     margin-top: -5px;

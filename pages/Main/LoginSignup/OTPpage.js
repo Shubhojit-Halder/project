@@ -38,7 +38,7 @@ const Signup2 = () => {
                 Enter details to continue
               </p>
 
-              <Box sx={{ "& > :not(style)": { m: 2 } }}>
+              <Box sx={{ "& > :not(style)": { ml: 2} }}>
                 <div className={styles.inputfield}>
                   <Box
                     sx={{
