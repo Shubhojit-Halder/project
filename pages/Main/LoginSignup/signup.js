@@ -15,161 +15,214 @@ import WcIcon from "@mui/icons-material/Wc";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import DialpadIcon from "@mui/icons-material/Dialpad";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
-
+import axios from "axios";
 const Signup = () => {
-  const [sex, setSex] = React.useState("");
+	const [sex, setSex] = React.useState("");
+	const [data, setData] = React.useState({
+		full_name: "",
+		email: "",
+		password: "",
+		// confirmPassword: "",
+		gender: "",
+		mobile: "",
+	});
+	const handleChange = (event) => {
+		setSex(event.target.value);
 
-  const handleChange = (event) => {
-    setSex(event.target.value);
-  };
-  return (
-    <div className={signUpModule.mainDiv}>
-      <div className={signUpModule.inputs_login}>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            "& > :not(style)": {
-              m: 1,
-              // width: 600,
-              // height: 530,
-            },
-          }}
-        >
-          <Paper elevation={3} className={signUpModule.input_box_container}>
-            <div className={signUpModule.design}>
-              <h1 className={signUpModule.brandName}>HexaOverflow</h1>
-              <h2>Let's get started !!</h2>
-              <p className={signUpModule.signupPara}>
-                Enter details to continue
-              </p>
+		setData((prev) => {
+			return { ...prev, gender: event.target.value };
+		});
+	};
 
-              <Box sx={{ "& > :not(style)": { m: 2 } }}>
-                <div className={signUpModule.inputfield}>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
-                    <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
-                    <TextField
-                      required
-                      id="outlined-required"
-                      label="Enter your name"
-                      defaultValue=""
-                      autoComplete="off"
-                    />
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "inline-block",
-                      alignItems: "flex-end",
-                      my: 2,
-                    }}
-                  >
-                    <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
-                    <TextField
-                      required
-                      id="outlined-required"
-                      label="Enter your email"
-                      defaultValue=""
-                      autoComplete="off"
-                    />
-                  </Box>
-                  <Box
-                    // className={signUpModule.box}
-                    sx={{ display: "inline-block", alignItems: "flex-end" }}
-                  >
-                    <LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
-                    <TextField
-                      required
-                      id="outlined-password-input"
-                      label="Password"
-                      type="password"
-                      autoComplete="current-password"
-                    />
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "inline-block",
-                      alignItems: "flex-end",
-                      mr: 2,
-                      my: 2,
-                    }}
-                  >
-                    <LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
-                    <TextField
-                      required
-                      id="outlined-password-input"
-                      label="Confirm password"
-                      type="password"
-                      autoComplete="current-password"
-                    />
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "inline-block",
-                      alignItems: "flex-end",
-                      mr: 2,
-                      // my: 2,
-                    }}
-                  >
-                    <DialpadIcon sx={{ mr: 2, ml: 2, my: 2 }} />
-                    <TextField
-                      required
-                      id="outlined-mobile-input"
-                      label="Mobile No."
-                      type="mobile no"
-                      autoComplete="off"
-                    />
-                  </Box>
-                  <Box
-                    className={signUpModule.selector}
-                    sx={{ mr: 2, my: 2, display: "inline-block" }}
-                  >
-                    <WcIcon sx={{ mr: 2, my: 2 }} />
-                    <FormControl sx={{ minWidth: 222 }}>
-                      <InputLabel id="demo-simple-select-label" label="Gender">
-                        Gender *
-                      </InputLabel>
-                      <Select
-                        required
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={sex}
-                        label="Gender"
-                        onChange={handleChange}
-                      >
-                        <MenuItem value={"Male"}>Male</MenuItem>
-                        <MenuItem value={"Female"}>Female</MenuItem>
-                        <MenuItem value={"Others"}>Others</MenuItem>
-                      </Select>
-                    </FormControl>
-                  </Box>
-                </div>
-                <div className={signUpModule.signupBtnDiv}>
-                  <Link href="./signup2">
-                    <a>
-                      <Button
-                        className={signUpModule.signupBtn}
-                        variant="contained"
-                      >
-                        Next <ArrowForwardIosRoundedIcon />
-                      </Button>
-                    </a>
-                  </Link>
-                </div>
-              </Box>
-            </div>
-          </Paper>
-        </Box>
-        <div className={signUpModule.sidePara}>
-          <h1>Discover a new world with us.</h1>
-          <p>
-            We're here to give you a better social media experience where you
-            can learn and grow without losing a single bit of fun.
-          </p>
-        </div>
-      </div>
-      {/* <div className={signUpModule.box}></div> */}
-    </div>
-  );
+	return (
+		<div className={signUpModule.mainDiv}>
+			<div className={signUpModule.inputs_login}>
+				<Box
+					sx={{
+						display: "flex",
+						flexWrap: "wrap",
+						"& > :not(style)": {
+							m: 1,
+							// width: 600,
+							// height: 530,
+						},
+					}}
+				>
+					<Paper elevation={3} className={signUpModule.input_box_container}>
+						<div className={signUpModule.design}>
+							<h1 className={signUpModule.brandName}>HexaOverflow</h1>
+							<h2>Let's get started !!</h2>
+							<p className={signUpModule.signupPara}>
+								Enter details to continue
+							</p>
+
+							<Box sx={{ "& > :not(style)": { m: 2 } }}>
+								<div className={signUpModule.inputfield}>
+									<Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
+										<AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
+										<TextField
+											required
+											id="outlined-required"
+											label="Enter your Name"
+											// defaultValue=""
+											autoComplete="off"
+											value={data.full_name}
+											onChange={(e) => {
+												setData((prev) => {
+													return { ...prev, full_name: e.target.value };
+												});
+											}}
+										/>
+									</Box>
+									<Box
+										sx={{
+											display: "inline-block",
+											alignItems: "flex-end",
+											my: 2,
+										}}
+									>
+										<AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
+										<TextField
+											required
+											id="outlined-required"
+											label="Enter your email"
+											value={data.email}
+											onChange={(e) => {
+												setData((prev) => {
+													return { ...prev, email: e.target.value };
+												});
+											}}
+											autoComplete="off"
+										/>
+									</Box>
+									<Box
+										// className={signUpModule.box}
+										sx={{ display: "inline-block", alignItems: "flex-end" }}
+									>
+										<LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
+										<TextField
+											required
+											id="outlined-password-input"
+											label="Password"
+											type="password"
+											value={data.password}
+											onChange={(e) => {
+												setData((prev) => {
+													return { ...prev, password: e.target.value };
+												});
+											}}
+											autoComplete="current-password"
+										/>
+									</Box>
+									<Box
+										sx={{
+											display: "inline-block",
+											alignItems: "flex-end",
+											mr: 2,
+											my: 2,
+										}}
+									>
+										<LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
+										<TextField
+											required
+											id="outlined-password-input"
+											label="Confirm password"
+											type="password"
+											// value={data.confirmPassword}
+											// onChange={(e) => {
+											// 	setData((prev) => {
+											// 		return { ...prev, confirmPassword: e.target.value };
+											// 	});
+											// }}
+											autoComplete="current-password"
+										/>
+									</Box>
+									<Box
+										sx={{
+											display: "inline-block",
+											alignItems: "flex-end",
+											mr: 2,
+											// my: 2,
+										}}
+									>
+										<DialpadIcon sx={{ mr: 2, ml: 2, my: 2 }} />
+										<TextField
+											required
+											id="outlined-mobile-input"
+											label="Mobile No."
+											type="mobile no"
+											value={data.mobile}
+											onChange={(e) => {
+												setData((prev) => {
+													return { ...prev, mobile: e.target.value };
+												});
+											}}
+											autoComplete="off"
+										/>
+									</Box>
+									<Box
+										className={signUpModule.selector}
+										sx={{ mr: 2, my: 2, display: "inline-block" }}
+									>
+										<WcIcon sx={{ mr: 2, my: 2 }} />
+										<FormControl sx={{ minWidth: 222 }}>
+											<InputLabel id="demo-simple-select-label" label="Gender">
+												Gender *
+											</InputLabel>
+											<Select
+												required
+												labelId="demo-simple-select-label"
+												id="demo-simple-select"
+												value={sex}
+												label="Gender"
+												onChange={handleChange}
+											>
+												<MenuItem value={"Male"}>Male</MenuItem>
+												<MenuItem value={"Female"}>Female</MenuItem>
+												<MenuItem value={"Others"}>Others</MenuItem>
+											</Select>
+										</FormControl>
+									</Box>
+								</div>
+								<div className={signUpModule.signupBtnDiv}>
+									<Link href="./signup2">
+										<a>
+											<Button
+												className={signUpModule.signupBtn}
+												variant="contained"
+												onClick={() => {
+													let res = axios
+														.post(
+															"http://localhost:8000/register/",
+															(data = data)
+														)
+														.then((a) => {
+															console.log(a);
+															localStorage.setItem("user_id", a.data.id);
+															localStorage.setItem("user_email", a.data.email);
+														});
+												}}
+											>
+												Next <ArrowForwardIosRoundedIcon />
+											</Button>
+										</a>
+									</Link>
+								</div>
+							</Box>
+						</div>
+					</Paper>
+				</Box>
+				<div className={signUpModule.sidePara}>
+					<h1>Discover a new world with us.</h1>
+					<p>
+						We're here to give you a better social media experience where you
+						can learn and grow without losing a single bit of fun.
+					</p>
+				</div>
+			</div>
+			{/* <div className={signUpModule.box}></div> */}
+		</div>
+	);
 };
 
 export default Signup;
