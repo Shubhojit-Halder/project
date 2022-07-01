@@ -1,5 +1,5 @@
 import React from "react";
-import signUpModule from "../styles/loginSignup/signup.module.css";
+import signUpModule from "../../../styles/loginSignup/signup.module.css";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
@@ -115,7 +115,7 @@ const Signup = () => {
                       required
                       id="outlined-mobile-input"
                       label="Mobile No."
-                      type="password"
+                      type="mobile no"
                       autoComplete="off"
                     />
                   </Box>
@@ -125,7 +125,7 @@ const Signup = () => {
                   >
                     <WcIcon sx={{ mr: 2, my: 2 }} />
                     <FormControl sx={{ minWidth: 222 }}>
-                      <InputLabel id="demo-simple-select-label">
+                      <InputLabel id="demo-simple-select-label" label="Gender">
                         Gender *
                       </InputLabel>
                       <Select
@@ -133,7 +133,7 @@ const Signup = () => {
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={sex}
-                        label="sex"
+                        label="Gender"
                         onChange={handleChange}
                       >
                         <MenuItem value={"Male"}>Male</MenuItem>

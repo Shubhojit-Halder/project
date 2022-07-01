@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import loginModule from "../styles/loginSignup/login.module.css";
+import loginModule from "../../../styles/loginSignup/login.module.css";
 import LockIcon from "@mui/icons-material/Lock";
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
