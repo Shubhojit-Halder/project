@@ -24,8 +24,9 @@ import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import CountrySelect from "../ComponentsFolder/CountrySelection";
 import country_codes from "../ComponentsFolder/countryCodes";
 import axios from "axios";
-
+import { useRouter } from "next/router";
 const Signup2 = () => {
+	const navigate = useRouter();
 	const [data, setData] = useState({
 		pin_code: "",
 		country_code: "",
@@ -158,11 +159,12 @@ const Signup2 = () => {
 													.then((a) => {
 														console.log(a.data);
 														setLoading(false);
+														navigate.push("/Main/LoginSignup/OTPpage");
 													});
 											}
 										}}
 									>
-										Send OTP
+										Next
 									</LoadingButton>
 									{/* </Link> */}
 								</div>

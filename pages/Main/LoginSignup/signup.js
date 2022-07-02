@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import signUpModule from "../../../styles/loginSignup/signup.module.css";
 import Link from "next/link";
 import Box from "@mui/material/Box";
@@ -16,8 +16,12 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import DialpadIcon from "@mui/icons-material/Dialpad";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import axios from "axios";
+import LoadingButton from "@mui/lab/LoadingButton";
+import { useRouter } from "next/router";
 const Signup = () => {
+	var navigate = useRouter();
 	const [sex, setSex] = React.useState("");
+	const [loading, setLoading] = useState(false);
 	const [data, setData] = React.useState({
 		full_name: "",
 		email: "",
@@ -185,28 +189,25 @@ const Signup = () => {
 									</Box>
 								</div>
 								<div className={signUpModule.signupBtnDiv}>
-									<Link href="./signup2">
-										<a>
-											<Button
-												className={signUpModule.signupBtn}
-												variant="contained"
-												onClick={() => {
-													let res = axios
-														.post(
-															"http://localhost:8000/register/",
-															(data = data)
-														)
-														.then((a) => {
-															console.log(a);
-															localStorage.setItem("user_id", a.data.id);
-															localStorage.setItem("user_email", a.data.email);
-														});
-												}}
-											>
-												Next <ArrowForwardIosRoundedIcon />
-											</Button>
-										</a>
-									</Link>
+									<LoadingButton
+										className={signUpModule.signupBtn}
+										variant="contained"
+										loading={loading}
+										onClick={() => {
+											setLoading(true);
+											let res = axios
+												.post("http://localhost:8000/register/", (data = data))
+												.then((a) => {
+													console.log(a);
+													localStorage.setItem("user_id", a.data.id);
+													localStorage.setItem("user_email", a.data.email);
+													setLoading(false);
+													navigate.push("/Main/LoginSignup/signup2");
+												});
+										}}
+									>
+										Next <ArrowForwardIosRoundedIcon />
+									</LoadingButton>
 								</div>
 							</Box>
 						</div>
