@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bree+Serif&family=El+Messiri&family=Josefin+Sans:wght@100&family=Quicksand:wght@300&display=swap');
+.wholeDiv{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
 .mainDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     padding:8.5px;
     font-family: 'Bree Serif', serif;
+    height: 100vh;
     letter-spacing: 1.4px;
     /* background-image: url('/..public/images/img2.jpg'); */
     /* background-color: black; */

@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8.5px;
+    /* margin-top: 8.5px; */
+    height: 100vh;
     font-family: 'Bree Serif', serif;
     letter-spacing: 1.4px;
 
