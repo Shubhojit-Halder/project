@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     padding:8.5px;
     font-family: 'Bree Serif', serif;
     letter-spacing: 1.4px;

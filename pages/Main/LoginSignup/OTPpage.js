@@ -6,10 +6,10 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import PasswordIcon from '@mui/icons-material/Password';
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import LocationCityRoundedIcon from "@mui/icons-material/LocationCityRounded";
-import axios from "axios";
-import LoadingButton from "@mui/lab/LoadingButton";
+
 
 const Signup2 = () => {
 	const [otp, setOTP] = React.useState("");
@@ -38,6 +38,7 @@ const Signup2 = () => {
 							<h1 className={styles.brandName}>HexaOverflow</h1>
 							<h2>Let's get started !!</h2>
 							<p className={styles.signupPara}>Enter details to continue</p>
+
 
 							<Box sx={{ "& > :not(style)": { ml: 2 } }}>
 								<div className={styles.inputfield}>
@@ -126,6 +127,7 @@ const Signup2 = () => {
 			</div>
 		</div>
 	);
+
 };
 
 export default Signup2;
