@@ -89,8 +89,8 @@ const Landing = () => {
         <motion.div className={styles.allcards}initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }} >
-        <motion.div variants={cardVariants}>
-          <Card sx={{ width: 250, height: 400 }} >
+        <motion.div className={styles.card_div} variants={cardVariants}>
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }} >
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -110,8 +110,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants} >
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div} variants={cardVariants} >
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -131,8 +131,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants} >
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div}  variants={cardVariants} >
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -152,8 +152,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants}>
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div} variants={cardVariants}>
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
