@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import loginModule from "../styles/loginSignup/login.module.css";
+import loginModule from "../../../styles/loginSignup/login.module.css";
 import LockIcon from "@mui/icons-material/Lock";
 import TextField from "@mui/material/TextField";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -11,8 +11,9 @@ import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 const Login = () => {
+
   return (
-    <div className={loginModule.mainDiv}>
+    <div className={loginModule.mainDiv} >
       <div className={loginModule.inputs_login}>
         <Box
           className={loginModule.box}
@@ -59,7 +60,7 @@ const Login = () => {
               <Button variant="text" className={loginModule.forgotBtn}>
                 Forgot Password ?
               </Button>
-              
+
               <div className={loginModule.socialAccouts}>
                 <ul>
                   <li> Login with</li>
@@ -77,14 +78,14 @@ const Login = () => {
             </div>
           </Paper>
         </Box>
-        
-        <Image
-          src="/../public/images/img.png"
-          alt="Picture of the author"
-          width={600}
-          height={300}
-          className={loginModule.img}
-        ></Image>
+
+            <Image
+              src="/../public/images/img.png"
+              alt="Picture of the author"
+              width={600}
+              height={300}
+              className={loginModule.img}
+            />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
-import signUpModule from "../styles/loginSignup/signup.module.css";
+import signUpModule from "../../../styles/loginSignup/signup.module.css";
+import Link from "next/link";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import LockIcon from "@mui/icons-material/Lock";
@@ -11,7 +12,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import WcIcon from "@mui/icons-material/Wc";
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import DialpadIcon from "@mui/icons-material/Dialpad";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
 const Signup = () => {
@@ -29,12 +31,12 @@ const Signup = () => {
             flexWrap: "wrap",
             "& > :not(style)": {
               m: 1,
-              width: 600,
-              height: 530,
+              // width: 600,
+              // height: 530,
             },
           }}
         >
-          <Paper elevation={3}>
+          <Paper elevation={3} className={signUpModule.input_box_container}>
             <div className={signUpModule.design}>
               <h1 className={signUpModule.brandName}>HexaOverflow</h1>
               <h2>Let's get started !!</h2>
@@ -45,7 +47,7 @@ const Signup = () => {
               <Box sx={{ "& > :not(style)": { m: 2 } }}>
                 <div className={signUpModule.inputfield}>
                   <Box sx={{ display: "inline-block", alignItems: "flex-end" }}>
-                    <AccountCircle sx={{ mr: 2, my: 2 }} />
+                    <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-required"
@@ -54,7 +56,13 @@ const Signup = () => {
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ display: "inline-block", alignItems: "flex-end",my:2 }}>
+                  <Box
+                    sx={{
+                      display: "inline-block",
+                      alignItems: "flex-end",
+                      my: 2,
+                    }}
+                  >
                     <AccountCircle sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
@@ -65,10 +73,10 @@ const Signup = () => {
                     />
                   </Box>
                   <Box
-                    className={signUpModule.box}
+                    // className={signUpModule.box}
                     sx={{ display: "inline-block", alignItems: "flex-end" }}
                   >
-                    <LockIcon sx={{ mr: 2, my: 2 }} />
+                    <LockIcon sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-password-input"
@@ -99,28 +107,33 @@ const Signup = () => {
                       display: "inline-block",
                       alignItems: "flex-end",
                       mr: 2,
-                      my: 2,
+                      // my: 2,
                     }}
                   >
-                    <LockIcon sx={{ mr: 2, my: 2 }} />
+                    <DialpadIcon sx={{ mr: 2, ml: 2, my: 2 }} />
                     <TextField
                       required
                       id="outlined-mobile-input"
                       label="Mobile No."
-                      type="password"
+                      type="mobile no"
                       autoComplete="off"
                     />
                   </Box>
-                  <Box sx={{ mr: 2, display: "inline-block" }}>
+                  <Box
+                    className={signUpModule.selector}
+                    sx={{ mr: 2, my: 2, display: "inline-block" }}
+                  >
                     <WcIcon sx={{ mr: 2, my: 2 }} />
                     <FormControl sx={{ minWidth: 222 }}>
-                      <InputLabel id="demo-simple-select-label">Gender *</InputLabel>
+                      <InputLabel id="demo-simple-select-label" label="Gender">
+                        Gender *
+                      </InputLabel>
                       <Select
                         required
                         labelId="demo-simple-select-label"
                         id="demo-simple-select"
                         value={sex}
-                        label="sex"
+                        label="Gender"
                         onChange={handleChange}
                       >
                         <MenuItem value={"Male"}>Male</MenuItem>
@@ -131,14 +144,16 @@ const Signup = () => {
                   </Box>
                 </div>
                 <div className={signUpModule.signupBtnDiv}>
-                <a href="./signup2">
-                  <Button
-                    className={signUpModule.signupBtn}
-                    variant="contained"
-                  >
-                   Next <ArrowForwardIosRoundedIcon/>
-                  </Button>
-                  </a>
+                  <Link href="./signup2">
+                    <a>
+                      <Button
+                        className={signUpModule.signupBtn}
+                        variant="contained"
+                      >
+                        Next <ArrowForwardIosRoundedIcon />
+                      </Button>
+                    </a>
+                  </Link>
                 </div>
               </Box>
             </div>
@@ -146,9 +161,13 @@ const Signup = () => {
         </Box>
         <div className={signUpModule.sidePara}>
           <h1>Discover a new world with us.</h1>
-          <p>We're here to give you a better social media experience where you can learn and grow without losing a single bit of fun.</p>
+          <p>
+            We're here to give you a better social media experience where you
+            can learn and grow without losing a single bit of fun.
+          </p>
         </div>
       </div>
+      {/* <div className={signUpModule.box}></div> */}
     </div>
   );
 };
