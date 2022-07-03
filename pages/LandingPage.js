@@ -57,7 +57,7 @@ const cardVariants= {
     }
   }
 }
-const Landing = () => {
+const LandingPage = () => {
   return (
     <>
       <div className={styles.main}>
@@ -79,7 +79,7 @@ const Landing = () => {
               Feeling unheard? Well don’t be ,sociobook is here to make you
               reach like minded grandee and be a part of the change.
             </motion.div>
-            <Link href="/Main/LoginSignup/login">
+            <Link href="/Main/LoginSignup/signup">
                 <Button variants={fadeIn} className={styles.signupBtn} variant="contained">
                   Get started <ArrowForwardIosRoundedIcon/>
                 </Button>
@@ -89,8 +89,8 @@ const Landing = () => {
         <motion.div className={styles.allcards}initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }} >
-        <motion.div variants={cardVariants}>
-          <Card sx={{ width: 250, height: 400 }} >
+        <motion.div className={styles.card_div} variants={cardVariants}>
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }} >
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -110,8 +110,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants} >
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div} variants={cardVariants} >
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -131,8 +131,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants} >
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div}  variants={cardVariants} >
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -152,8 +152,8 @@ const Landing = () => {
             </CardActionArea>
           </Card>
           </motion.div>
-          <motion.div variants={cardVariants}>
-          <Card sx={{ width: 250, height: 400 }}>
+          <motion.div className={styles.card_div} variants={cardVariants}>
+          <Card sx={{ maxWidth: 250, maxHeight: 400 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -178,4 +178,4 @@ const Landing = () => {
     </>
 
   )}
-  export default Landing;
+  export default LandingPage;

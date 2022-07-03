@@ -1,14 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux'
 import { store } from './app/store'
-import Landing from './landing'
+import LandingPage from './LandingPage'
 import Navbar from './Main/ComponentsFolder/Navbar';
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    {/* <Landing/> */}
+    {/* <Navbar/> */}
+    <LandingPage/>
     </>
   )
 }
