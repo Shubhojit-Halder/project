@@ -57,7 +57,7 @@ const cardVariants= {
     }
   }
 }
-const Landing = () => {
+const LandingPage = () => {
   return (
     <>
       <div className={styles.main}>
@@ -79,7 +79,7 @@ const Landing = () => {
               Feeling unheard? Well don’t be ,sociobook is here to make you
               reach like minded grandee and be a part of the change.
             </motion.div>
-            <Link href="/Main/LoginSignup/login">
+            <Link href="/Main/LoginSignup/signup">
                 <Button variants={fadeIn} className={styles.signupBtn} variant="contained">
                   Get started <ArrowForwardIosRoundedIcon/>
                 </Button>
@@ -178,4 +178,4 @@ const Landing = () => {
     </>
 
   )}
-  export default Landing;
+  export default LandingPage;
