@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../ComponentsFolder/Navbar";
 import Grid from "@mui/material/Grid";
 import style from "../../../styles/Home/home.module.css";
@@ -8,6 +8,13 @@ import Box from "@mui/material/Box";
 import Profile from "./profile";
 
 const Home = () => {
+	useEffect(() => {
+	  
+	var elem = document.getElementById("section4");
+	console.log(elem);
+	
+	}, [])
+	
 	return (
 		<div>
 			<Navbar></Navbar>
@@ -19,21 +26,30 @@ const Home = () => {
 							<Grid item xs={0} sm={0} md={0} lg={3}>
 								<Paper elevation={3} className={style.section1} />
 								<Box mt={3}>
-									<Paper
+									
+
+									 <Paper
 										elevation={3}
-										className={style.section4}
+										className={style.section6}
 										style={{ minHeight: "250px" }}
 									>
 										<Profile />
 									</Paper>
+									
 								</Box>
-								<Box mt={1}>
+									<div className={style.containerhold}>
+
+									<div className={style.hold}>
+
 									<Paper
 										elevation={3}
+										id="section4"
 										className={style.section4}
 										style={{ height: "350px" }}
-									/>
-								</Box>
+										/>
+										</div>
+										</div>
+								
 							</Grid>
 							<Grid item xs={12} sm={11} md={7} lg={6}>
 								<div className={style.postContainer}>
@@ -70,6 +86,7 @@ const Home = () => {
 					</Box>
 				</div>
 			</div>
+	
 		</div>
 	);
 };
