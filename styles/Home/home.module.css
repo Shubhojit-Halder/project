@@ -37,32 +37,51 @@
 }
 .section4{
     margin-top: 10px;
-    min-height: 250px; width: 100%;
+    height: 250px; width: 100%;
+    contain: content;
+    overflow-y: scroll;
+  
+}
+.section4::-webkit-scrollbar{
+    margin-top: 20px;
+    width: 1.5px;
+    border-radius: 10px;
+}
+.section4::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(194, 193, 193);
 }
 .section6{
     
     min-height: 250px; width: 100%;
 }
-/* .containerhold{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background-color: aquamarine;
-contain: content;
- 
-}
 .hold{
-
-
-    position: absolute;
-
-   top:30px;
-   height: 300px;
-   width: 90%;
-   background-color: red;
-
-} */
+    position: fixed;
+    height: 250px;
+    width: 270px;
+    top: 100px;
+}
+.hold2{
+    position: fixed;
+    height: 250px;
+    width: 270px;
+    top: 90px;
+    right: 50px;
+}
+.section7{
+    contain: content;
+    overflow-y: scroll;
+    min-height: 250px; width: 275px;
+}
+.section7::-webkit-scrollbar{
+    margin-top: 20px;
+    width: 1.5px;
+    border-radius: 10px;
+}
+.section7::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(194, 193, 193);
+}
 .containerSection34{
     display: flex;
     align-items: center;
@@ -95,17 +114,20 @@ contain: content;
     }
 }
 @media screen and (max-width:1200px) {
-    .section1,.section4{
+    .section1,.section4,.section6,.section7{
         display: none;
     }
 }
-@media screen and (max-width:999px){
+@media screen and (max-width:900px){
     /* .section2{
         width:100%;
     } */
     /* .gridMain{
         padding:20px 20px;
     } */
+    .section5{
+        display: none;
+    }
 }
 @media screen and (max-width:600px) {
     .section2{
@@ -115,7 +137,7 @@ contain: content;
         top:0;
         transform: translate(-50%, 0%);
     }
-    .section1,.section4,.section3,.section5{
+    .section1,.section6,.section4,.section3,.section5{
         display:none;
     }
  
@@ -128,7 +150,7 @@ contain: content;
         top:0;
         transform: translate(-50%, 0%);
     }
-    .section1,.section4,.section3,.section5{
+    .section1,.section6,.section4,.section3,.section5{
         display:none;
     }
  
