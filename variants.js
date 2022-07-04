@@ -43,16 +43,18 @@ export const staggerContainer = {
   animate: {
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 0.7,
+      delayChildren: 1,
     },
   },
 };
 export const cardVariants = {
   offscreen: {
     y: 300,
+    // opacity:0;
   },
   onscreen: {
     y: 0,
+    // opacity:1,
     transition: {
       type: "spring",
       bounce: 0.4,

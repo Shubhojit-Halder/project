@@ -6,11 +6,12 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { CardActionArea } from "@mui/material";
 import styles from "../styles/Landing.module.css";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import { motion } from "framer-motion";
-import { headerVariant,fadeIn,staggerContainer,cardVariants,fadePara } from "../variants";
+import { headerVariant,fadeIn,staggerContainer,fadePara } from "../variants";
 import img from "../public/images/picsart.png"
 // const headerVariant = {
 //   initial: {
@@ -43,7 +44,7 @@ import img from "../public/images/picsart.png"
 //     },
 //   },
 // };
-// const cardVariants = {
+// const fadePara = {
 //   offscreen: {
 //     y: 300,
 //   },
@@ -125,7 +126,7 @@ const LandingPage = () => {
           whileInView="onscreen"
           viewport={{ amount: 0.8 }}
         >
-          <motion.div className={styles.card_div} variants={cardVariants}>
+          <motion.div className={styles.card_div} variants={fadePara}>
             <Card sx={{ maxWidth: 250, maxHeight: 380,my:1}}>
               <CardActionArea>
                 <CardMedia
@@ -147,7 +148,7 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={cardVariants}>
+          <motion.div className={styles.card_div} variants={fadePara}>
             <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
               <CardActionArea>
                 <CardMedia
@@ -169,7 +170,7 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={cardVariants}>
+          <motion.div className={styles.card_div} variants={fadePara}>
             <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
               <CardActionArea>
                 <CardMedia
@@ -191,7 +192,7 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={cardVariants}>
+          <motion.div className={styles.card_div} variants={fadePara}>
             <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
               <CardActionArea>
                 <CardMedia
@@ -214,6 +215,9 @@ const LandingPage = () => {
             </Card>
           </motion.div>
         </motion.div>
+        <div className={styles.footer}>
+          <p>Created with <FavoriteBorderIcon/> by</p>
+        </div>
       </div>
     </>
   );
