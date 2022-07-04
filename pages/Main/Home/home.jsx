@@ -8,6 +8,8 @@ import Box from "@mui/material/Box";
 import Profile from "./profile";
 import MenuList from "./menulist";
 import Post from "./post";
+import Contents from "./contents";
+import ContentContainer from "./contentContainer";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -45,7 +47,7 @@ const Home = () => {
 									elevation={3}
 									id="section4"
 									className={style.section4}
-									style={{ height: "350px" }}
+									style={{ height: "320px" }}
 								>
 									<MenuList></MenuList>
 								</Paper>
@@ -55,7 +57,7 @@ const Home = () => {
 											<Paper
 												elevation={3}
 												className={style.section7}
-												style={{ height: "350px" }}
+												style={{ height: "320px" }}
 											>
 												<MenuList></MenuList>
 											</Paper>
@@ -79,24 +81,7 @@ const Home = () => {
 											<Post />
 										</Paper>
 									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
-									<div className={style.containerSection2}>
-										<Paper elevation={3} className={style.section2} />
-									</div>
+									<ContentContainer />
 								</div>
 							</Grid>
 							<Grid item xs={0} sm={0} md={4} lg={3}>
