@@ -6,13 +6,13 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { CardActionArea } from "@mui/material";
 import styles from "../styles/Landing.module.css";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import { motion } from "framer-motion";
-import { headerVariant,fadeIn,staggerContainer,fadePara } from "../variants";
-import img from "../public/images/picsart.png"
+import { headerVariant, fadeIn, staggerContainer, fadePara } from "../variants";
+import img from "../public/images/picsart.png";
 // const headerVariant = {
 //   initial: {
 //     y: -100,
@@ -104,30 +104,42 @@ const LandingPage = () => {
             </Link>
           </motion.div>
         </div>
-        <motion.div className={styles.portion} initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ amount: 0.8 }}>
-        <Image
-					src={img}
-					alt="Picture of the author"
-					width={600}
-					height={300}
-					className={styles.img}
-          variants={fadeIn}
-				/>
-        <motion.div className={styles.writeup} variants={fadePara}>
+        <motion.div
+          className={styles.portion}
+          initial="initial"
+          animate="animate"
+          viewport={{ amount: 0.8 }}
+        >
+          <Image
+            src={img}
+            alt="Picture of the author"
+            width={600}
+            height={300}
+            className={styles.img}
+            variants={fadeIn}
+          />
+          <motion.div className={styles.writeup} variants={fadePara}>
             <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, at delectus soluta natus asperiores assumenda a esse fuga? Quam maiores aperiam molestiae possimus tenetur labore deleniti quod similique sint est?</p>
-        </motion.div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus, at delectus soluta natus asperiores assumenda a esse
+              fuga? Quam maiores aperiam molestiae possimus tenetur labore
+              deleniti quod similique sint est?
+            </p>
+          </motion.div>
         </motion.div>
         <motion.div
           className={styles.allcards}
-          initial="offscreen"
-          whileInView="onscreen"
+          variants={staggerContainer}
           viewport={{ amount: 0.8 }}
         >
-          <motion.div className={styles.card_div} variants={fadePara}>
-            <Card sx={{ maxWidth: 250, maxHeight: 380,my:1}}>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -148,8 +160,13 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={fadePara}>
-            <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -170,8 +187,13 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={fadePara}>
-            <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -192,8 +214,13 @@ const LandingPage = () => {
               </CardActionArea>
             </Card>
           </motion.div>
-          <motion.div className={styles.card_div} variants={fadePara}>
-            <Card sx={{ maxWidth: 250, maxHeight: 380,my:1 }}>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -216,7 +243,9 @@ const LandingPage = () => {
           </motion.div>
         </motion.div>
         <div className={styles.footer}>
-          <p>Created with <FavoriteBorderIcon/> by</p>
+          <p>
+            Created with <FavoriteBorderIcon /> by
+          </p>
         </div>
       </div>
     </>
