@@ -106,8 +106,8 @@ const LandingPage = () => {
         </div>
         <motion.div
           className={styles.portion}
-          initial="initial"
-          animate="animate"
+          initial="offscreen"
+          whileInView="onscreen"
           viewport={{ amount: 0.8 }}
         >
           <Image
@@ -244,8 +244,9 @@ const LandingPage = () => {
         </motion.div>
         <div className={styles.footer}>
           <p>
-            Created with <FavoriteBorderIcon /> by
+            Created with ❤ by <span className={styles.footerTeamName}>Team HexaOverflow</span>
           </p>
+
         </div>
       </div>
     </>
