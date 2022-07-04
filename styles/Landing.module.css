@@ -5,6 +5,10 @@
     background-image:linear-gradient(rgba(0, 0, 250, 0), rgba(255,255, 255, 1)),
                     url("../public/img/shape.png");
 }
+.main{
+    height: 100vh;
+    overflow-y: scroll;
+}
 .header{
     display: flex;
     justify-content: space-between;
