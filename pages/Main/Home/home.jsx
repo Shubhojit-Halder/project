@@ -10,6 +10,8 @@ import MenuList from "./menulist";
 import Post from "./post";
 import Contents from "./contents";
 import ContentContainer from "./contentContainer";
+import Fab from "@mui/material/Fab";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -21,6 +23,8 @@ const Home = () => {
 				setDiv(false);
 			}
 		};
+		var fab = document.getElementById("fab");
+		console.log(fab);
 	}, []);
 
 	return (
@@ -93,6 +97,18 @@ const Home = () => {
 										{div ? (
 											<div className={style.hold2}>
 												<Paper elevation={3} className={style.section5} />
+												<div className={style.fab} id="fab">
+													<Fab
+														color="primary"
+														aria-label="add"
+														onClick={() => {
+															var div = document.getElementById("main");
+															div.scrollTop = 0;
+														}}
+													>
+														<ArrowUpwardIcon />
+													</Fab>
+												</div>
 											</div>
 										) : (
 											<></>

@@ -5,6 +5,13 @@
 .gap{
     height:200px;
 }
+.fab{
+    position: fixed;
+    right: -30px;
+    bottom: -150px;
+    height: 250px;
+    width: 250px;
+}
 .main{
     background-color: #ecece9a9;
     height: 100vh;
@@ -141,6 +148,9 @@
     } */
     .section5{
         display: none;
+    }
+    .fab{
+        right:-150px
     }
 }
 @media screen and (max-width:600px) {
