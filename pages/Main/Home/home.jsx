@@ -7,6 +7,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Profile from "./profile";
 import MenuList from "./menulist";
+import Post from "./post";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -22,7 +23,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<Navbar/>
+			<Navbar />
 
 			<div className={style.main} id="main">
 				<div className={style.gridMain}>
@@ -69,12 +70,14 @@ const Home = () => {
 									<div className={style.containerSection2}>
 										<Paper
 											elevation={3}
-											className={style.section2}
 											style={{
-												height: "200px",
+												height: "130px",
 												marginBottom: "30px",
 											}}
-										/>
+											className={style.section2c}
+										>
+											<Post />
+										</Paper>
 									</div>
 									<div className={style.containerSection2}>
 										<Paper elevation={3} className={style.section2} />
