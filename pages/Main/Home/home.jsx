@@ -22,7 +22,7 @@ const Home = () => {
 
 	return (
 		<div>
-			<Navbar></Navbar>
+			<Navbar/>
 
 			<div className={style.main} id="main">
 				<div className={style.gridMain}>
