@@ -43,7 +43,7 @@ export const staggerContainer = {
   animate: {
     transition: {
       staggerChildren: 0.5,
-      delayChildren: 1,
+      delayChildren: 0.8,
     },
   },
 };
