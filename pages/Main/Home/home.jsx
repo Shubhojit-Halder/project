@@ -12,6 +12,8 @@ import Contents from "./contents";
 import ContentContainer from "./contentContainer";
 import Fab from "@mui/material/Fab";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import Followers from "./Followers";
+import FollowersComponent from "./FollowersComponent";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -91,9 +93,13 @@ const Home = () => {
 								</Grid>
 								<Grid item xs={0} sm={0} md={4} lg={3}>
 									<div className={style.containerSection34}>
-										<Paper elevation={3} className={style.section3} />
-
+										<Paper elevation={3} className={style.section3}>
+											<div className={style.followers}>
+												<FollowersComponent />
+											</div>
+										</Paper>
 										<Paper elevation={3} className={style.section5} />
+
 										{div ? (
 											<div className={style.hold2}>
 												<Paper elevation={3} className={style.section5} />
