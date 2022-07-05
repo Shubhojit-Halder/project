@@ -121,7 +121,7 @@ const Footer = () => {
               <div className={styles.contact_details}>
                 <h3>Contact Us</h3>
                 <p>Ph no: <br/>+91 99032 47560</p>
-                <p>Email:<br/> admin@hexaoverflow.com </p>
+                <p>Email:<br/> admin@outlook.com </p>
               </div>
             </div>
           </div>
