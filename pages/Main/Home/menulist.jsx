@@ -27,6 +27,7 @@ import ToysIcon from "@mui/icons-material/Toys";
 import ForumIcon from "@mui/icons-material/Forum";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import TagIcon from "@mui/icons-material/Tag";
+import LogoutIcon from "@mui/icons-material/Logout";
 import {
 	FcDocument,
 	FcAdvertising,
@@ -77,35 +78,12 @@ export default function NestedList() {
 				</ListItemIcon>
 				<ListItemText primary="Pages" />
 			</ListItemButton>
-			<ListItemButton>
-				<ListItemIcon>
-					<FcAdvertising size={25} />
-				</ListItemIcon>
-				<ListItemText primary="Events" />
-			</ListItemButton>
-			<ListItemButton>
-				<ListItemIcon>
-					<GroupAddIcon color="secondary" />
-				</ListItemIcon>
-				<ListItemText primary="Followed" />
-			</ListItemButton>
+
 			<ListItemButton>
 				<ListItemIcon>
 					<FcBookmark size={25} />
 				</ListItemIcon>
 				<ListItemText primary="Bookmarks" />
-			</ListItemButton>
-			<ListItemButton>
-				<ListItemIcon>
-					<PeopleIcon color="primary" />
-				</ListItemIcon>
-				<ListItemText primary="People I Follow" />
-			</ListItemButton>
-			<ListItemButton>
-				<ListItemIcon>
-					<SettingsIcon />
-				</ListItemIcon>
-				<ListItemText primary="Settings" />
 			</ListItemButton>
 
 			<ListItemButton onClick={handleClick}>
@@ -127,6 +105,38 @@ export default function NestedList() {
 				<List component="div" disablePadding>
 					<ListItemButton sx={{ pl: 4 }}>
 						<ListItemIcon>
+							<PeopleIcon color="primary" />
+						</ListItemIcon>
+						<ListItemText primary="People I Follow" />
+					</ListItemButton>
+				</List>
+				<List component="div" disablePadding>
+					<ListItemButton sx={{ pl: 4 }}>
+						<ListItemIcon>
+							<GroupAddIcon color="secondary" />
+						</ListItemIcon>
+						<ListItemText primary="Followed" />
+					</ListItemButton>
+				</List>
+				<List component="div" disablePadding>
+					<ListItemButton sx={{ pl: 4 }}>
+						<ListItemIcon>
+							<FcAdvertising size={25} />
+						</ListItemIcon>
+						<ListItemText primary="Events" />
+					</ListItemButton>
+				</List>
+				<List component="div" disablePadding>
+					<ListItemButton sx={{ pl: 4 }}>
+						<ListItemIcon>
+							<SettingsIcon />
+						</ListItemIcon>
+						<ListItemText primary="Settings" />
+					</ListItemButton>
+				</List>
+				<List component="div" disablePadding>
+					<ListItemButton sx={{ pl: 4 }}>
+						<ListItemIcon>
 							<FcPuzzle size={25} />
 						</ListItemIcon>
 						<ListItemText primary="Games" />
@@ -141,6 +151,12 @@ export default function NestedList() {
 					</ListItemButton>
 				</List>
 			</Collapse>
+			<ListItemButton>
+				<ListItemIcon>
+					<LogoutIcon color="error" />
+				</ListItemIcon>
+				<ListItemText primary="Log Out" />
+			</ListItemButton>
 		</List>
 	);
 }

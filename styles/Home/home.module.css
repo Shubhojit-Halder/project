@@ -1,4 +1,17 @@
-
+.sobarbap{
+    padding-bottom: 100px;
+    height:110vh;
+}
+.gap{
+    height:200px;
+}
+.fab{
+    position: fixed;
+    right: -30px;
+    bottom: -150px;
+    height: 250px;
+    width: 250px;
+}
 .main{
     background-color: #ecece9a9;
     height: 100vh;
@@ -8,7 +21,10 @@
     /* align-items: center; */
     overflow-y: scroll;
     justify-content: center;
+    margin-bottom: 100px;
+    padding-bottom:100px
 }
+
 .main::-webkit-scrollbar{
     width:7px;
     border-radius: 10px;
@@ -25,7 +41,9 @@
 }
 .section2{
     min-height:350px;width:600px;
+    
 }
+
 .section2c{
     width:600px;
 }
@@ -130,6 +148,9 @@
     } */
     .section5{
         display: none;
+    }
+    .fab{
+        right:-150px
     }
 }
 @media screen and (max-width:600px) {
