@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "./Footer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,7 +14,6 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import { motion } from "framer-motion";
 import { headerVariant, fadeIn, staggerContainer, fadePara } from "../variants";
 import img from "../public/images/picsart.png";
-import img1 from "../public/images/unsplash.jpg";
 // const headerVariant = {
 //   initial: {
 //     y: -100,
@@ -243,76 +243,7 @@ const LandingPage = () => {
             </Card>
           </motion.div>
         </motion.div>
-        <div className={styles.footer}>
-          <div className={styles.creation}>
-            <p>
-              Created with ❤ by{" "}
-              <span className={styles.footerTeamName}>Team HexaOverflow</span>
-            </p>
-          </div>
-          <div className={styles.membersArea}>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Subhradeep</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Aryadeep</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Shubhojit</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Pubali</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Priyanka</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Debargha</p>
-            </div>
-          </div>
-        </div>
+        <Footer/>
       </div>
     </>
   );
