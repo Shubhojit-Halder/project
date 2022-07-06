@@ -1,51 +1,17 @@
-/*.wholePage{
-    min-height: 100vh;
-}
-.mainDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-    margin: 0px 300px;
-}
-.coverImg{
-    background-image: url('../../public/images/unsplash.jpg');
-    height: 300px;
-    width:900px;
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 
-}
-.profilePic{
-    height:200px;
-    width:200px;
-    background-repeat: no-repeat;
-    margin: -100px 200px 0px 0px;
-    border-radius: 50%;
-    outline: 2px solid #fff;
-    z-index: 1;
-}
-.profileImg{
-    border-radius: 50%;
-}
-.name{
-    font-size: 2rem;
-    margin-left:-100px;
-}
-.name h3{
-    margin-top: -5px;
-}
-.name .editProfileBtn{
-    margin-top: -50px;
-}
-.postss{
-} */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Secular+One&display=swap');
 .wholePage{
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.wholePage::-webkit-scrollbar{
+    margin-top: 20px;
+    width: 3px;
+    border-radius: 10px;
+}
+.wholePage::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(194, 193, 193);
 }
 .imageDiv{
     /* background-color:red; */
@@ -103,6 +69,9 @@
     height: 200px;
     /* background-color: red; */
 }
+.bioData{
+    
+}
 .name{
     color:black;
     font-size:20px;
@@ -136,4 +105,10 @@ word-break: break-word;
     padding:0 20px;
     padding-bottom:25px;
     font-size: 14px;
+}
+
+@media (max-width:600px) {
+    .profileName{
+        height: 320px;
+    }
 }

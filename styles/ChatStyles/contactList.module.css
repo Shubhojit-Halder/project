@@ -3,10 +3,15 @@
     width:30%;
     background-color: rgb(30, 30, 30);
     float: left;
+    /* overflow-y: auto; */
+    /* height: 60vh; */
+    /* height: 100vh; */
 }
 .header{
     /* height: 70px; */
     padding: 5px 10px;
+    position: sticky;
+    z-index: 10;
     /* background-color: aqua; */
     display: flex;
     text-align: center;
@@ -15,7 +20,7 @@
     justify-content: space-between;
 }
 
-.profileImage{
+.profileImage,.contactProfileImage{
     border-radius: 50%;
     outline: 1px solid white;
     width: 50px;
@@ -23,18 +28,25 @@
     /* margin: 2px 5px; */
 }
 .nameImage{
-    /* width:px; */
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.image{
+.image,.contactImage{
     border-radius: 50%;
+}
+.contactImage{
+    position: absolute;
+
 }
 .ownName{
     padding: 0px 10px;
-    color: rgb(4, 99, 183);
+    color: rgb(255, 255, 255);
+}
+.contactName{
+    padding: 0px 10px;
+    width: 300px;
+    overflow-wrap: break-word;
 }
 .icons{
    cursor: pointer;
@@ -46,9 +58,12 @@
    /* background-color: antiquewhite; */
 }
 .allContacts{
-    overflow: hidden;
-    min-height: 100vh;
-    overflow-y: scroll;
+    /* overflow: hidden; */
+    /* min-height: 100vh; */
+    /* overflow: auto; */
+    overflow-y: auto;
+    /* height: 60vh; */
+    height: 100vh;
 }
 .allContacts::-webkit-scrollbar{
     margin-top: 20px;
@@ -65,4 +80,5 @@ height: 60px;
 border-bottom: 1px solid black ;
 display: flex;
 align-items: center;
+padding: 10px 10px;
 }

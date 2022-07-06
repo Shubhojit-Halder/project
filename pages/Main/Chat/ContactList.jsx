@@ -8,7 +8,7 @@ import PersonSearchIcon from "@mui/icons-material/PersonSearch";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 const ContactList = () => {
   return (
-    <Box className={styles.contactsMain}>
+    <div className={styles.contactsMain}>
       <div className={styles.header}>
         <div className={styles.nameImage}>
           <div className={styles.profileImage}>
@@ -31,15 +31,15 @@ const ContactList = () => {
       </div>
       <div className={styles.allContacts}>
         <div className={styles.contacts}>
-          <div className={styles.profileImage}>
+          <div className={styles.contactProfileImage}>
             <Image
-              className={styles.image}
+              className={styles.contactImage}
               src={img}
               width="50px"
               height="50px"
             />
           </div>
-          <h4 className={styles.ownName}>Shubhojit</h4>
+          <h4 className={styles.contactName}>Pubalissssssssssssssssssssssssss</h4>
         </div>
         <div className={styles.contacts}>hi</div>
         <div className={styles.contacts}>hi</div>
@@ -49,9 +49,14 @@ const ContactList = () => {
         <div className={styles.contacts}>hi</div>
         <div className={styles.contacts}>hi</div>
         <div className={styles.contacts}>hi</div>
+        <div className={styles.contacts}>hi</div>
+        <div className={styles.contacts}>hi</div>
+        <div className={styles.contacts}>hi</div>
+        
+
 
       </div>
-    </Box>
+      </div>
   );
 };
 

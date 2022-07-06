@@ -8,6 +8,8 @@ import Image from "next/image";
 import profileImg from "../../../public/images/food.jpg";
 import coverImg from "../../../public/images/profilebackground.jpg";
 import ContentContainer from '../Home/contentContainer'
+import NestedList from "../Home/menulist";
+import FadeMenu from "../Home/menu";
 const IndvidualProfile = () => {
   return (
     <>
@@ -33,11 +35,15 @@ const IndvidualProfile = () => {
               <div className={styles.identity}>
                 Student of Meghnad Saha Institute of Technology
               </div>
+              <div className={styles.bioData}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis labore est dignissimos dolorem nisi explicabo ex autem? Aliquam dolores molestias quibusdam perferendis velit necessitatibus? Explicabo vel iusto nisi consequuntur natus!
+              </div>
             </div>
           </div>
         </div>
         <ContentContainer/>
       </div>
+
       {/* <div className={styless.mainDiv}>
           <div className={styless.coverPhoto}>
             <Image
