@@ -13,12 +13,17 @@ import TextField from "@mui/material/TextField";
 import Comments from "./comments";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const Contents = () => {
+	const [more, setMore] = React.useState(false);
+	var s =
+		"<span>Project<span> Is Done by ,\nHexa Overflow\nHexa Overflow\nHexa Overflow\nHexa Overflow";
 	return (
-		<div className={style.main}>
+		<div className={style.main2}>
 			<div className={style.uppergrid}>
 				<ProfilePicture />
 				<div className={style.owner}>
-					<span className={style.name}>Subhradeep Pal Shared SeP's post</span>
+					<span
+						className={style.name}
+					>{`Subhradeep Pal Shared SeP's post`}</span>
 					<span className={style.time}>Time : 2 days ago</span>
 				</div>
 				<div className={style.owner}></div>
@@ -28,9 +33,16 @@ const Contents = () => {
 			</div>
 			<div className={style.textContainer}>
 				<span className={style.text}>
-					{ReactHtmlParser(
-						"<span>Project<span> Is Done by ,\nHexa Overflow\nHexa Overflow\nHexa Overflow\nHexa Overflow"
-					)}
+					{!more ? ReactHtmlParser(s.slice(0, 50)) : ReactHtmlParser(s)}
+				</span>
+				<br />
+				<span
+					style={{ fontWeight: "700", cursor: "pointer", fontSize: "12px" }}
+					onClick={() => {
+						setMore((pre) => !pre);
+					}}
+				>
+					{!more ? " Show More..." : " Show Less"}
 				</span>
 			</div>
 			<div className={style.ownercontainer}>
@@ -45,9 +57,16 @@ const Contents = () => {
 				</div>
 				<div className={style.textContainer}>
 					<span className={style.text}>
-						{ReactHtmlParser(
-							"<span>Project<span> Is Done by ,\nHexa Overflow\nHexa Overflow\nHexa Overflow\nHexa Overflow"
-						)}
+						{!more ? ReactHtmlParser(s.slice(0, 50)) : ReactHtmlParser(s)}
+					</span>
+					<br />
+					<span
+						style={{ fontWeight: "700", cursor: "pointer", fontSize: "12px" }}
+						onClick={() => {
+							setMore((pre) => !pre);
+						}}
+					>
+						{!more ? " Show More..." : " Show Less"}
 					</span>
 				</div>
 				<div className={style.imageDiv}>
@@ -55,6 +74,7 @@ const Contents = () => {
 						src="https://i.pinimg.com/550x/4a/6f/59/4a6f59296f90c11d77744720ca10d1af.jpg"
 						width="100%"
 						height="auto"
+						alt="Image"
 					/>
 				</div>
 			</div>

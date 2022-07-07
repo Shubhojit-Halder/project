@@ -35,7 +35,22 @@
     padding-right:6px;
     padding-bottom:10px;
     background: rgb(216,216,216);
-    background: linear-gradient(298deg, rgb(247, 253, 255) 0%, rgb(201, 231, 250) 38%, rgb(29, 106, 221) 38%, rgb(6, 60, 141) 100%);
+    background: linear-gradient(298deg, rgb(247, 253, 255) 0%, rgb(201, 231, 250) 38%, rgb(111, 142, 228) 38%, rgb(119, 103, 236) 100%);
+    border-radius:5px 5px 0 0;
+}
+.seeall2{
+    position: static;
+    padding-top: 10px;
+    display: grid;
+    align-items: center;
+    height: 52px;
+    width: 100%;
+    /* justify-content:space-between; */
+    grid-template-columns: 4fr 5fr;
+    padding-right:6px;
+    padding-bottom:10px;
+    background: rgb(216,216,216);
+    background: linear-gradient(298deg, rgb(247, 253, 255) 0%, rgb(201, 231, 250) 38%, rgb(111, 142, 228) 38%, rgb(119, 103, 236) 100%);
     border-radius:5px 5px 0 0;
 }
 .title{
@@ -43,6 +58,24 @@
     align-items: center;
     justify-content: center;
     /* background-color: red; */
+}
+.followers2{
+    /* padding-top:5px; */
+    height: 140px;
+    width: 100%;
+    overflow-y: scroll;
+    padding-bottom:10px ;
+}
+.followers2::-webkit-scrollbar{
+    width:0px;
+    border-radius: 10px;
+}
+.followers2::-webkit-scrollbar-thumb{
+    background-color: rgba(128, 128, 128, 0.774);
+}
+.followers2::-webkit-scrollbar-button{
+    border-radius: 10px;
+
 }
 @media screen and (max-width:1218px) and (min-width:1200px) {
     .followerstitle{

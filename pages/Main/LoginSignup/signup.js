@@ -55,7 +55,7 @@ const Signup = () => {
 					<Paper elevation={3} className={signUpModule.input_box_container}>
 						<div className={signUpModule.design}>
 							<h1 className={signUpModule.brandName}>HexaOverflow</h1>
-							<h2>Let's get started !!</h2>
+							<h2>{"Let's get started !!"}</h2>
 							<p className={signUpModule.signupPara}>
 								Enter details to continue
 							</p>
@@ -216,8 +216,8 @@ const Signup = () => {
 				<div className={signUpModule.sidePara}>
 					<h1>Discover a new world with us.</h1>
 					<p>
-						We're here to give you a better social media experience where you
-						can learn and grow without losing a single bit of fun.
+						{`We're here to give you a better social media experience where you
+						can learn and grow without losing a single bit of fun.`}
 					</p>
 				</div>
 			</div>
