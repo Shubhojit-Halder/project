@@ -14,6 +14,7 @@ import Fab from "@mui/material/Fab";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Followers from "./Followers";
 import FollowersComponent from "./FollowersComponent";
+import FollowRequests from "./FollowRequests";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -98,11 +99,19 @@ const Home = () => {
 												<FollowersComponent />
 											</div>
 										</Paper>
-										<Paper elevation={1} className={style.section5} />
+										<Paper elevation={1} className={style.section5}>
+											<div className={style.followers}>
+												<FollowRequests />
+											</div>
+										</Paper>
 
 										{div ? (
 											<div className={style.hold2}>
-												<Paper elevation={1} className={style.section5} />
+												<Paper elevation={1} className={style.section5}>
+													<div className={style.followers}>
+														<FollowRequests />
+													</div>
+												</Paper>
 												<div className={style.fab} id="fab">
 													<Fab
 														color="primary"
