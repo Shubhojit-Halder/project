@@ -27,10 +27,10 @@
 .nav_icons li {
   padding: 0px 5px 0px 70px;
   cursor: pointer;
-  /* color: ; */
+  
 }
 .nav_icons li:hover{
-    transform: translateY(-20%)
+    /* transform: translateY(-20%) */
 }
 .searchBar{
     background-color: black;
@@ -88,12 +88,16 @@
         padding-left: 10px;
     }
     .nav_icons li{
-        padding: 0px 0px 0px 10px;
+        padding: 0px 0px 0px 5px;
     }
 }
 @media (max-width:400px) {
+    .branding{
+        font-size: 1.3rem;
+    }
     .nav_icons li{
-        padding: 0px 0px 0px 5px;
+        padding: 0px 0px 0px 3px;
+        size: 0.8rem;
     }
 }
 @media (max-width:380px)

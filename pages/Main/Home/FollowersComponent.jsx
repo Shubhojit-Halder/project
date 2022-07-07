@@ -25,6 +25,12 @@ const FollowersComponent = () => {
 			<Followers />
 			<Followers />
 			<Followers />
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
 
 			<div className={style.morefollowers}>
 				<Button
