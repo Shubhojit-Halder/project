@@ -16,6 +16,7 @@ import Followers from "./Followers";
 import FollowersComponent from "./FollowersComponent";
 import FollowRequests from "./FollowRequests";
 import Hashtags from "./Hashtags";
+import Floatingchat from "../../floatchat/Floatingchat";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -34,6 +35,7 @@ const Home = () => {
 	return (
 		<div>
 			<Navbar />
+			<Floatingchat />
 			<div className={style.sobarbap}>
 				<div className={style.main} id="main">
 					<div className={style.gridMain}>
