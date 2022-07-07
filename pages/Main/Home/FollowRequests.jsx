@@ -11,7 +11,7 @@ const FollowersComponent = () => {
 		<div>
 			<div className={style.seeall}>
 				<div className={style.title}>
-					<span className={style.followerstitle}>You May Follow</span>
+					<span className={style.followerstitle}>Follow Requests</span>
 				</div>
 				<Button
 					variant="contained"
