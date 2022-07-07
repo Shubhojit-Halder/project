@@ -14,7 +14,7 @@ import Comments from "./comments";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const Contents = () => {
 	return (
-		<div className={style.main}>
+		<div className={style.main2}>
 			<div className={style.uppergrid}>
 				<ProfilePicture />
 				<div className={style.owner}>
