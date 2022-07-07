@@ -175,7 +175,7 @@
     }
 }
 @media screen and (max-width:600px) {
-    .section2{
+    .section2,.section2c{
         width:400px;
     }
     .postContainer{

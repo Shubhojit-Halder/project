@@ -10,12 +10,14 @@ const FollowersComponent = () => {
 	return (
 		<div>
 			<div className={style.seeall}>
-				<span className={style.followerstitle}>Followers</span>
+				<div className={style.title}>
+					<span className={style.followerstitle}>You Should Follow</span>
+				</div>
 				<Button
 					variant="contained"
-					endIcon={<CallMadeIcon color="action" />}
+					endIcon={<CallMadeIcon fontSize="10px" color="action" />}
 					color="inherit"
-					style={{ borderRadius: "40px" }}
+					style={{ borderRadius: "40px", fontSize: "10px" }}
 				>
 					See All
 				</Button>
