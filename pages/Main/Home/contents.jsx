@@ -13,6 +13,9 @@ import TextField from "@mui/material/TextField";
 import Comments from "./comments";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 const Contents = () => {
+	const [more, setMore] = React.useState(false);
+	var s =
+		"<span>Project<span> Is Done by ,\nHexa Overflow\nHexa Overflow\nHexa Overflow\nHexa Overflow";
 	return (
 		<div className={style.main}>
 			<div className={style.uppergrid}>
@@ -28,9 +31,16 @@ const Contents = () => {
 			</div>
 			<div className={style.textContainer}>
 				<span className={style.text}>
-					{ReactHtmlParser(
-						"<span>Project<span> Is Done by ,\nHexa Overflow\nHexa Overflow\nHexa Overflow\nHexa Overflow"
-					)}
+					{!more ? ReactHtmlParser(s.slice(0, 50)) : ReactHtmlParser(s)}
+				</span>
+				<br />
+				<span
+					style={{ fontWeight: "700", cursor: "pointer", fontSize: "12px" }}
+					onClick={() => {
+						setMore((pre) => !pre);
+					}}
+				>
+					{!more ? " Show More..." : " Show Less"}
 				</span>
 			</div>
 			<div className={style.imageDiv}>
