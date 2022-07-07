@@ -1,0 +1,54 @@
+.profile{
+
+    display: flex;
+    position: relative;
+    height:50px;
+    width: 50px;
+    /* align-items: center;
+    justify-content: center; */
+}
+.followmain:hover{
+    background-color:rgba(128, 128, 128, 0.151);
+}
+.followerstitle{
+    /* padding-left: 20px; */
+    color:white;
+    font-size: 14px;
+}
+.morefollowers{
+    height:50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top:20px;
+}.seeall{
+    /* position:fixed; */
+    padding-top: 10px;
+    display: grid;
+    align-items: center;
+    height: 52px;
+    width: 100%;
+    /* justify-content:space-between; */
+    grid-template-columns: 4fr 3fr;
+    padding-right:6px;
+    padding-bottom:10px;
+    background: rgb(216,216,216);
+    background: linear-gradient(298deg, rgb(247, 253, 255) 0%, rgb(201, 231, 250) 38%, rgb(29, 106, 221) 38%, rgb(6, 60, 141) 100%);
+    border-radius:5px 5px 0 0;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+@media screen and (max-width:1218px) and (min-width:1200px) {
+    .followerstitle{
+        font-size:11px;
+    }
+    .seeall{
+        grid-template-columns: 3fr 3fr;
+    }
+}

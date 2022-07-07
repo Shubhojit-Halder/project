@@ -49,7 +49,28 @@
 }
 .section3{
     height:350px;width:90%;
-    
+    /* padding: 15px 0; */
+    /* overflow-y: scroll; */
+}
+
+.followers{
+    /* padding-top:5px; */
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding-bottom:10px ;
+}
+
+.followers::-webkit-scrollbar{
+    width:0px;
+    border-radius: 10px;
+}
+.followers::-webkit-scrollbar-thumb{
+    background-color: rgba(128, 128, 128, 0.774);
+}
+.followers::-webkit-scrollbar-button{
+    border-radius: 10px;
+
 }
 .section5{
     height:250px;width:90%;
@@ -154,7 +175,7 @@
     }
 }
 @media screen and (max-width:600px) {
-    .section2{
+    .section2,.section2c{
         width:400px;
     }
     .postContainer{

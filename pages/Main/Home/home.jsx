@@ -12,6 +12,8 @@ import Contents from "./contents";
 import ContentContainer from "./contentContainer";
 import Fab from "@mui/material/Fab";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import Followers from "./Followers";
+import FollowersComponent from "./FollowersComponent";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -36,10 +38,10 @@ const Home = () => {
 						<Box sx={{ flexGrow: 1 }}>
 							<Grid container spacing={2}>
 								<Grid item xs={0} sm={0} md={0} lg={3}>
-									<Paper elevation={3} className={style.section1} />
+									<Paper elevation={1} className={style.section1} />
 									<Box mt={3}>
 										<Paper
-											elevation={3}
+											elevation={1}
 											className={style.section6}
 											style={{ minHeight: "250px" }}
 										>
@@ -48,7 +50,7 @@ const Home = () => {
 									</Box>
 
 									<Paper
-										elevation={3}
+										elevation={1}
 										id="section4"
 										className={style.section4}
 										style={{ height: "320px" }}
@@ -59,7 +61,7 @@ const Home = () => {
 										<>
 											<div className={style.hold}>
 												<Paper
-													elevation={3}
+													elevation={1}
 													className={style.section7}
 													style={{ height: "320px" }}
 												>
@@ -75,7 +77,7 @@ const Home = () => {
 									<div className={style.postContainer}>
 										<div className={style.containerSection2}>
 											<Paper
-												elevation={3}
+												elevation={1}
 												style={{
 													height: "130px",
 													marginBottom: "30px",
@@ -91,12 +93,16 @@ const Home = () => {
 								</Grid>
 								<Grid item xs={0} sm={0} md={4} lg={3}>
 									<div className={style.containerSection34}>
-										<Paper elevation={3} className={style.section3} />
+										<Paper elevation={1} className={style.section3}>
+											<div className={style.followers}>
+												<FollowersComponent />
+											</div>
+										</Paper>
+										<Paper elevation={1} className={style.section5} />
 
-										<Paper elevation={3} className={style.section5} />
 										{div ? (
 											<div className={style.hold2}>
-												<Paper elevation={3} className={style.section5} />
+												<Paper elevation={1} className={style.section5} />
 												<div className={style.fab} id="fab">
 													<Fab
 														color="primary"
