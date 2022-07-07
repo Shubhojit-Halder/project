@@ -22,7 +22,7 @@ import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import PasswordIcon from "@mui/icons-material/Password";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import CountrySelect from "../ComponentsFolder/CountrySelection";
-import country_codes from "../ComponentsFolder/countryCodes";
+
 import axios from "axios";
 import { useRouter } from "next/router";
 const Signup2 = () => {
@@ -51,7 +51,7 @@ const Signup2 = () => {
 					<Paper elevation={3} className={signUpModule2.input_box_container}>
 						<div className={signUpModule2.design}>
 							<h1 className={signUpModule2.brandName}>HexaOverflow</h1>
-							<h2>Let's get started !!</h2>
+							<h2>{"Let's get started !!"}</h2>
 							<p className={signUpModule2.signupPara}>
 								Enter details to continue
 							</p>
@@ -175,8 +175,8 @@ const Signup2 = () => {
 				<div className={signUpModule2.sidePara}>
 					<h1>Discover a new world with us.</h1>
 					<p>
-						We're here to give you a better social media experience where you
-						can learn and grow without losing a single bit of fun.
+						{`We're here to give you a better social media experience where you
+						can learn and grow without losing a single bit of fun.`}
 					</p>
 				</div>
 			</div>

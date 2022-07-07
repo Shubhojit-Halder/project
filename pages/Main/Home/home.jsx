@@ -15,6 +15,7 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Followers from "./Followers";
 import FollowersComponent from "./FollowersComponent";
 import FollowRequests from "./FollowRequests";
+import Hashtags from "./Hashtags";
 const Home = () => {
 	const [div, setDiv] = useState(false);
 	useEffect(() => {
@@ -39,14 +40,18 @@ const Home = () => {
 						<Box sx={{ flexGrow: 1 }}>
 							<Grid container spacing={2}>
 								<Grid item xs={0} sm={0} md={0} lg={3}>
-									<Paper elevation={1} className={style.section1} />
-									<Box mt={3}>
+									<Box>
 										<Paper
 											elevation={1}
 											className={style.section6}
 											style={{ minHeight: "250px" }}
 										>
 											<Profile />
+										</Paper>
+									</Box>
+									<Box mt={1}>
+										<Paper elevation={1} className={style.section1}>
+											<Hashtags />
 										</Paper>
 									</Box>
 
@@ -95,22 +100,18 @@ const Home = () => {
 								<Grid item xs={0} sm={0} md={4} lg={3}>
 									<div className={style.containerSection34}>
 										<Paper elevation={1} className={style.section3}>
-											<div className={style.followers}>
-												<FollowersComponent />
-											</div>
+											<FollowersComponent />
 										</Paper>
 										<Paper elevation={1} className={style.section5}>
-											<div className={style.followers}>
-												<FollowRequests />
-											</div>
+											{/* <div className={style.followers}> */}
+											<FollowRequests />
+											{/* </div> */}
 										</Paper>
 
 										{div ? (
 											<div className={style.hold2}>
 												<Paper elevation={1} className={style.section5}>
-													<div className={style.followers}>
-														<FollowRequests />
-													</div>
+													<FollowRequests />
 												</Paper>
 												<div className={style.fab} id="fab">
 													<Fab

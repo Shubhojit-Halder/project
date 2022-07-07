@@ -36,7 +36,7 @@ const Signup2 = () => {
 					<Paper elevation={3} className={styles.input_box_container}>
 						<div className={styles.design}>
 							<h1 className={styles.brandName}>HexaOverflow</h1>
-							<h2>Let's get started !!</h2>
+							<h2>{"Let's get started !!"}</h2>
 							<p className={styles.signupPara}>Enter details to continue</p>
 
 							<Box sx={{ "& > :not(style)": { ml: 2 } }}>
@@ -119,8 +119,8 @@ const Signup2 = () => {
 				<div className={styles.sidePara}>
 					<h1>Discover a new world with us.</h1>
 					<p>
-						We're here to give you a better social media experience where you
-						can learn and grow without losing a single bit of fun.
+						{`We're here to give you a better social media experience where you
+						can learn and grow without losing a single bit of fun.`}
 					</p>
 				</div>
 			</div>

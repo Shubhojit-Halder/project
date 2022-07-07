@@ -1,6 +1,7 @@
 import React from "react";
 import Followers from "./Followers";
 import style from "../../../styles/Home/Followers.module.css";
+import style2 from "../../../styles/Home/home.module.css";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
@@ -22,19 +23,25 @@ const FollowersComponent = () => {
 					See All
 				</Button>
 			</div>
-			<Followers />
-			<Followers />
-			<Followers />
+			<div className={style2.followers}>
+				<Followers />
+				<Followers />
+				<Followers />
+				<Followers />
+				<Followers />
+				<Followers />
+				<Followers />
 
-			<div className={style.morefollowers}>
-				<Button
-					variant="contained"
-					startIcon={<ExpandMoreIcon color="action" />}
-					color="inherit"
-					style={{ borderRadius: "40px" }}
-				>
-					MORE
-				</Button>
+				<div className={style.morefollowers}>
+					<Button
+						variant="contained"
+						startIcon={<ExpandMoreIcon color="action" />}
+						color="inherit"
+						style={{ borderRadius: "40px" }}
+					>
+						MORE
+					</Button>
+				</div>
 			</div>
 		</div>
 	);
