@@ -12,7 +12,7 @@
     /* background-attachment: fixed; */
     background-origin:inherit;
     background-size: 300%;
-    filter:brightness(.8)  grayscale(5) opacity(0.8) hue-rotate(20);
+    filter:brightness(120%) hue-rotate(6deg) ;
     position:relative;
     /* filter:blur(2px) */
 }

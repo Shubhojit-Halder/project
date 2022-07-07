@@ -39,8 +39,7 @@ const Home = () => {
 						<Box sx={{ flexGrow: 1 }}>
 							<Grid container spacing={2}>
 								<Grid item xs={0} sm={0} md={0} lg={3}>
-									<Paper elevation={1} className={style.section1} />
-									<Box mt={3}>
+									<Box>
 										<Paper
 											elevation={1}
 											className={style.section6}
@@ -48,6 +47,9 @@ const Home = () => {
 										>
 											<Profile />
 										</Paper>
+									</Box>
+									<Box mt={1}>
+										<Paper elevation={1} className={style.section1} />
 									</Box>
 
 									<Paper

@@ -18,7 +18,9 @@ const Contents = () => {
 			<div className={style.uppergrid}>
 				<ProfilePicture />
 				<div className={style.owner}>
-					<span className={style.name}>Subhradeep Pal Shared SeP's post</span>
+					<span
+						className={style.name}
+					>{`Subhradeep Pal Shared SeP's post`}</span>
 					<span className={style.time}>Time : 2 days ago</span>
 				</div>
 				<div className={style.owner}></div>
@@ -55,6 +57,7 @@ const Contents = () => {
 						src="https://i.pinimg.com/550x/4a/6f/59/4a6f59296f90c11d77744720ca10d1af.jpg"
 						width="100%"
 						height="auto"
+						alt="Image"
 					/>
 				</div>
 			</div>
