@@ -18,7 +18,7 @@ import securityImg from "../public/images/data-security-technology-background-ve
 import friends from '../public/images/friends.jpg'
 import Post from '../public/images/Post.jpg'
 import Search from '../public/images/Search.jpg'
-import Chat from '../public/images/Chat.jpg'
+import ChatImg from '../public/images/Chat.jpg'
 import User from '../public/images/User.jpg'
 // const headerVariant = {
 //   initial: {
@@ -262,7 +262,7 @@ const LandingPage = () => {
               <CardActionArea>
               <CardMedia>
                 <Image
-                    src={Chat}
+                    src={ChatImg}
                     alt="chat img"
                     width="250"
                     height="180"
