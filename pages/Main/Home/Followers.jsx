@@ -16,17 +16,21 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import ProfilePicture from "./profilePicture";
 import style from "../../../styles/Home/Followers.module.css";
 import Tooltip from "@mui/material/Tooltip";
-const Followers = () => {
+const Followers = (props) => {
 	return (
 		<div style={{ cursor: "pointer" }} className={style.followmain}>
 			<List dense={true}>
 				<ListItem
 					secondaryAction={
-						<Tooltip title="Follow">
-							<IconButton edge="end" aria-label="delete">
-								<PersonAddIcon color="primary" />
-							</IconButton>
-						</Tooltip>
+						props.chat ? (
+							<></>
+						) : (
+							<Tooltip title="Follow">
+								<IconButton edge="end" aria-label="delete">
+									<PersonAddIcon color="primary" />
+								</IconButton>
+							</Tooltip>
+						)
 					}
 				>
 					<div className={style.profile}>
@@ -35,7 +39,7 @@ const Followers = () => {
 
 					<ListItemText
 						primary="Single-line item"
-						secondary={"Secondary text"}
+						secondary={"Secondajj\njjjjj\njjjjjjjjjjjjj".slice(0, 10) + "..."}
 					/>
 				</ListItem>
 			</List>
