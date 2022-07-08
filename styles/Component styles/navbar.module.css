@@ -75,6 +75,11 @@
         padding: 0px 0px 0px 50px;
     }
 }
+@media (max-width:650px) {
+    .nav_icons li{
+        padding: 0px 0px 0px 30px;
+    }
+}
 @media(max-width:600px)
 {
     .nav_icons li{
@@ -111,6 +116,7 @@
 @media (max-width:380px)
 {
     .nav_icons li{
-        padding: 0px 0px 0px 3px;
+        padding: 0px 0px 0px 1px;
     }
 }
+

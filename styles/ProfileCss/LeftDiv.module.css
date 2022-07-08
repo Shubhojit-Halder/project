@@ -1,0 +1,27 @@
+.list{
+    padding: 10px 5px;
+}
+.list ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.list ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+.list ul li:hover{
+    color:rgb(132, 0, 255)
+}
+.list ul li span{
+    padding: 0px 10px;
+}
+.shareBtn{
+    width:120px;
+    border-radius: 20px;
+}
