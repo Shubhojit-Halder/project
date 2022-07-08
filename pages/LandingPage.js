@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "./Footer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -13,7 +14,12 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import { motion } from "framer-motion";
 import { headerVariant, fadeIn, staggerContainer, fadePara } from "../variants";
 import img from "../public/images/picsart.png";
-import img1 from "../public/images/unsplash.jpg";
+import securityImg from "../public/images/data-security-technology-background-vector-blue-tone_53876-112201.webp";
+import friends from '../public/images/friends.jpg'
+import Post from '../public/images/Post.jpg'
+import Search from '../public/images/Search.jpg'
+import ChatImg from '../public/images/Chat.jpg'
+import User from '../public/images/User.jpg'
 // const headerVariant = {
 //   initial: {
 //     y: -100,
@@ -140,22 +146,24 @@ const LandingPage = () => {
             initial="offscreen"
             whileInView="onscreen"
           >
-            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                  <Image
+                    src={securityImg}
+                    alt="Security image"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
+
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Security
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    System designed to provide maximum guard and protection
+                    against any sort of menace.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -167,22 +175,23 @@ const LandingPage = () => {
             initial="offscreen"
             whileInView="onscreen"
           >
-            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                <Image
+                    src={friends}
+                    alt="Follow your friends img"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Follow your friends
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Get connected with your pals and see what they're upto(Just
+                    like the old day).
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -194,22 +203,23 @@ const LandingPage = () => {
             initial="offscreen"
             whileInView="onscreen"
           >
-            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                <Image
+                    src={Post}
+                    alt="Share posts img"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Share posts
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Share what's on your mind and get every bit of appreciation
+                    you deserve.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -221,98 +231,85 @@ const LandingPage = () => {
             initial="offscreen"
             whileInView="onscreen"
           >
-            <Card sx={{ maxWidth: 250, maxHeight: 380, my: 1 }}>
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
               <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
-                />
+                <CardMedia>
+                <Image
+                    src={Search}
+                    alt="Search engine img"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
-                    Lizard
+                    Search engine
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    Get the information you are looking for in just a click
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </motion.div>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
+              <CardActionArea>
+              <CardMedia>
+                <Image
+                    src={ChatImg}
+                    alt="chat img"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    Chat
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Converse with your friends and like minded people and have a
+                    rollicking time.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+            </Card>
+          </motion.div>
+          <motion.div
+            className={styles.card_div}
+            variants={fadePara}
+            initial="offscreen"
+            whileInView="onscreen"
+          >
+            <Card sx={{ width: 250, height: 310, my: 1 }}>
+              <CardActionArea>
+              <CardMedia>
+                  <Image
+                    src={User}
+                    alt="User image"
+                    width="250"
+                    height="180"
+                  />
+                </CardMedia>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    User friendly
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Get the atmosphere that's quick to learn and easy to work
+                    with
                   </Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
           </motion.div>
         </motion.div>
-        <div className={styles.footer}>
-          <div className={styles.creation}>
-            <p>
-              Created with ❤ by{" "}
-              <span className={styles.footerTeamName}>Team HexaOverflow</span>
-            </p>
-          </div>
-          <div className={styles.membersArea}>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Subhradeep</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Aryadeep</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Shubhojit</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Pubali</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Priyanka</p>
-            </div>
-            <div className={styles.memberClass}>
-              <Image
-                src={img1}
-                alt="Picture of the author"
-                width={30}
-                height={30}
-                className={styles.ourImg}
-              />
-              <p className={styles.ourNames}>Debargha</p>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </div>
     </>
   );

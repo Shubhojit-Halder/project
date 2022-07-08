@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&family=Secular+One&display=swap");
+.wholePage {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.wholePage::-webkit-scrollbar {
+  margin-top: 20px;
+  width: 3px;
+  border-radius: 10px;
+}
+.wholePage::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(194, 193, 193);
+}
+.imageDiv {
+  /* background-color:red; */
+  width: 100%;
+  height: 300px;
+  border-radius: 5px 5px 0 0;
+  background-image: url(../../public/images/ss1.png);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-origin: inherit;
+  background-size: 300%;
+  filter: brightness(0.8) grayscale(5) opacity(0.8);
+  position: relative;
+  /* filter:blur(2px) */
+}
+.main {
+  position: relative;
+  /* min-height: ; */
+  width: 100%;
+  box-sizing: border-box;
+  /* background-color: red;; */
+  /* contain: content; */
+}
+.profileImage {
+  height: 250px;
+  width: 250px;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  left: 30%;
+  top: 120px;
+  transform: translate(-70%, 0);
+  border-radius: 50%;
+  border: 5px solid white;
+  outline: 2px solid black;
+}
+.image {
+  border-radius: 50%;
+}
+.profileName {
+  width: 100%;
+  margin-top: 100px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-radius: 0 0 5px 5px;
+  height: 200px;
+}
+.identity {
+  overflow-wrap: break-word;
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding-left: 10px;
+}
+.bioData {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -10px;
+  flex-wrap: wrap;
+  display: flex;
+}
+.name {
+  color: black;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  padding: 20px 20px 10px 0px;
+  overflow-wrap: break-word;
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-weight: bolder;
+}
+.editBtn,
+.followerBtn {
+  padding: 8px;
+  margin: 10px 10px 0px 0px;
+}
+.editBtn:hover,
+.followerBtn:hover {
+  color: rgb(126, 0, 164);
+  background-color: rgba(255, 0, 242, 0.057);
+  border: 1px solid rgb(126, 0, 164);
+}
+.backBtn {
+  color: black;
+  padding: 15px 15px;
+  margin-top: 5px;
+}
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  line-height: 17px;
+  margin-top: -70px;
+  padding: 20px;
+  float: right;
+}
+.identity {
+  font-family: "Poppins", sans-serif;
+  padding: 0px 10px 10px 0px;
+  font-size: 14px;
+}
+.editingButtons {
+  margin-bottom: 15px;
+  margin-top: -5px;
+}
+.PhotosGrid {
+  /* background-color: rgba(29, 29, 29, 0.304); */
+  overflow-y: scroll;
+  outline: 0.5px solid rgba(0, 0, 0, 0.532);
+  border-radius: 5px 5px 0px 0px;
+  height: 49vh;
+}
+.PhotosGrid::-webkit-scrollbar {
+  margin-top: 0px;
+  width: 1px;
+  border-radius: 10px;
+}
+.PhotosGrid::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(61, 61, 61);
+}
+@media (max-width: 900px) {
+  .PhotosGrid {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .profileImage {
+    height: 150px;
+    width: 150px;
+    left: 30%;
+    top: 220px;
+  }
+
+  .nameContainer {
+    /* margin-left: 10px; */
+    margin-top: -25px;
+    /* align-items: ; */
+  }
+}

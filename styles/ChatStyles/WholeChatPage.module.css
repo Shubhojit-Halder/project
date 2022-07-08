@@ -1,0 +1,19 @@
+/* ChatPage Css styles here */
+.chatPageMain{
+    margin: 0;
+    margin-top: 0px;
+    height: 100vh;
+    width:100%;
+    background-color: rgb(82, 82, 82);
+    float: right;
+    /* background:transparent; */
+}
+
+/* Contact display main */
+.contactsMain{
+    margin: 0;
+    height: 100vh;
+    width:30%;
+    background-color: rgb(30, 30, 30);
+    float: left;
+}

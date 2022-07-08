@@ -23,6 +23,17 @@ const FollowersComponent = () => {
 					See All
 				</Button>
 			</div>
+<<<<<<< HEAD
+			<Followers />
+			<Followers />
+			<Followers />
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
+			<Followers/>
+=======
 			<div className={style2.followers}>
 				<Followers />
 				<Followers />
@@ -31,6 +42,7 @@ const FollowersComponent = () => {
 				<Followers />
 				<Followers />
 				<Followers />
+>>>>>>> d983b89d8e5f5c4260b0e124812de48e04a07222
 
 				<div className={style.morefollowers}>
 					<Button
