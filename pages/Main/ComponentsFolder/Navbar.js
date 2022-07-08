@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className={styles.main}>
       <h2 className={styles.branding}>
-        <Link href="/">HexaOverflow </Link>
+        <Link href="/">Daakticket</Link>
       </h2>
       {/* <div className={styles.searchBar}>
         <input type="text" placeholder="Search.." />
@@ -30,36 +30,45 @@ const Navbar = () => {
         </Button>
       </div></li> */}
         <li>
-          <Link href="/home">
+          <Link href="../Home/home">
+            <IconButton aria-label="Home" color="inherit">
             <HomeRoundedIcon />
+            </IconButton>
           </Link>
         </li>
         <li>
           <Link href="/friends">
+          <IconButton aria-label="Home" color="inherit">
             <PeopleAltRoundedIcon />
+            </IconButton>
           </Link>
         </li>
         <li>
           <Link href="/notification">
-            {/* <IconButton
-                size="large"
+            <IconButton
                 aria-label="show 17 new notifications"
                 color="inherit"
-              > */}
+              >
             <Badge badgeContent={15} color="error">
               <NotificationsRoundedIcon />
             </Badge>
-            {/* </IconButton> */}
+            </IconButton>
           </Link>
         </li>
         <li>
           <Link href="/search">
+          <IconButton aria-label="Games" color="inherit">
+
             <GamesIcon />
+            </IconButton>
           </Link>
         </li>
         <li>
-          <Link href="/menu">
+          <Link href="../Home/menulist" >
+          <IconButton aria-label="Menu" color="inherit">
+            
             <MenuIcon />
+            </IconButton>
           </Link>
         </li>
       </ul>
