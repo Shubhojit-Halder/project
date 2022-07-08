@@ -2,8 +2,8 @@
 
 .main {
   display: flex;
-  flex-wrap:wrap;
-  justify-content: flex-start;
+  /* flex-wrap:wrap; */
+  /* justify-content: flex-start; */
   align-items: center;
   margin-top: -5px;
   padding-right:20px ;
@@ -15,7 +15,7 @@
     letter-spacing: 1px;
     /* color:rgb(212, 212, 212); */
     font-family: 'El Messiri', sans-serif;
-    background-color:red;
+    /* background-color:red; */
 }
 .nav_icons {
   display: flex;
@@ -23,7 +23,19 @@
   align-items: center;
   justify-content: center;
     position: relative;
-    left: 20px;
+    /* left: 20px; */
+    right: 20px;
+}
+.iconContainer{
+    position: relative;
+    right: 0px;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    /* left:0 */
+    /* background-color:red; */
+    height:100%;
+    width:100%;
 }
 .nav_icons li {
   padding: 0px 5px 0px 60px;
@@ -35,14 +47,14 @@
 }
 .searchBar{
     /* background-color: rgb(207, 207, 207); */
-    width: 220px;
-    display: flex;
-    justify-content: space-between;
+    width: 700px;
+    /* display: flex; */
+    /* justify-content: space-between; */
     align-items: center;
     border-radius:22px ;
     /* margin-right: -400px; */
-    /* padding-left: 10px; */
-    padding-right: 10px;
+    padding-left: 20px;
+    /* padding-right: 10px; */
     /* background-color:red; */
 }
 .searchBar input{
@@ -55,6 +67,9 @@
     border-radius: 20px;
     padding: 5px 10px;
     /* font-weight: 600; */
+    transition: all 0.2s;
+    position: relative;
+    width: 100%;
 }
 .searchBtn{
     background-color: rgb(223, 222, 222);
@@ -74,22 +89,33 @@
     .nav_icons li{
         padding: 0px 0px 0px 50px;
     }
+    .gameicon,.homeicon{
+        display: none;
+    }
 }
-@media (max-width:650px) {
+@media (max-width:691px) {
     .nav_icons li{
         padding: 0px 0px 0px 30px;
     }
 }
-@media(max-width:600px)
+@media(max-width:620px)
 {
     .nav_icons li{
-        padding: 0px 0px 0px 20px;
+        padding: 0px 0px 0px 30px;
+    }
+    .peopleicon{
+        display: none;
     }
     .nav_icons{
         margin: -8px 0px;
         justify-content: center;
     }
     
+}
+@media screen and (max-width:541px){
+    .notificationicon{
+        display: none;
+    }
 }
 @media (max-width:480px) {
     .main{
@@ -103,6 +129,7 @@
     .nav_icons li{
         padding: 0px 0px 0px 5px;
     }
+  
 }
 @media (max-width:400px) {
     .branding{
@@ -112,6 +139,8 @@
         padding: 0px 0px 0px 3px;
         size: 0.8rem;
     }
+
+   
 }
 @media (max-width:380px)
 {
