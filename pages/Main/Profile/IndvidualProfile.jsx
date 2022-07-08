@@ -14,13 +14,26 @@ import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import FollowersComponent from "../Home/FollowersComponent.jsx";
 import { Paper } from "@mui/material";
 import RecentPhotos from "./RecentPhotos";
+import LeftDiv from "./LeftDiv";
+import RightDiv from "./RightDiv";
 const IndvidualProfile = () => {
   return (
     <>
       <div className={styles.wholePage}>
         <Navbar />
         <Grid container spacing={0}>
-          <Grid item xs={12} sm={12} md={8.5} sx={{ mb: 10, mx: 1 }}>
+          <Grid
+            item
+            xs={0}
+            sm={4.1}
+            md={3}
+            className={styles.leftDiv}
+          >
+           <LeftDiv/> 
+
+          </Grid>
+
+          <Grid item xs={12} sm={7.2} md={6.2} sx={{ mb: 10, mx: 1 }}>
             <div className={styles.main}>
               <div className={styles.imageDiv}>
                 <Link href="../Home/home">
@@ -57,7 +70,15 @@ const IndvidualProfile = () => {
                     </Button>
                   </div>
                 </div>
-                <div className={styles.bioData}>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={0} sm={0} md={2.5} className={styles.PhotosGrid} >
+            <RightDiv/>
+         </Grid>
+         <Grid item xs={12} sm={12} md={12} className={styles.BioGrid} >
+
+         <div className={styles.bioData}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
                   labore est dignissimos dolorem nisi explicabo ex autem?
                   Aliquam dolores molestias quibusdam perferendis velit
@@ -66,18 +87,9 @@ const IndvidualProfile = () => {
                   Quam, sint sed. Accusantium quos quam mollitia sint
                   dignissimos eveniet sunt possimus.
                 </div>
-              </div>
-            </div>
-          </Grid>
-          <Grid
-            item
-            sm={0}
-            md={3.25}
-            className={styles.PhotosGrid}
-          >
-            <RecentPhotos/>
-          </Grid>
-          <Grid item xs={12} sm={12} md={8} sx={{ mx: 1, mt: 15 }}>
+         </Grid>
+
+          <Grid item xs={12} sm={12} md={12} sx={{ mx: 1, mt: 15 }} className={styles.contents}>
             <ContentContainer className={styles.ContentContainer} />
           </Grid>
         </Grid>
