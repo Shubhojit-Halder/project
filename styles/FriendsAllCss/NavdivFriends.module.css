@@ -1,0 +1,17 @@
+.NavItems{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* font-size: 2rem; */
+
+}
+.item,.icons{
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: 600;
+}
+.heading{
+    font-size: 1.5rem;
+    padding: 10px 10px 0px 10px;
+
+}

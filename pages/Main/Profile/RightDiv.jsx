@@ -19,13 +19,15 @@ const RightDiv = () => {
           <span>
             {" "}
             <Button
-              variant="contained"
-              endIcon={<CallMadeIcon fontSize="10px" color="action" />}
-              color="inherit"
-              style={{
+              variant="outlined"
+              endIcon={<CallMadeIcon fontSize="10px" color="#fff" />}
+              className={styles.seeAllBtn}
+              sx={{
                 borderRadius: "40px",
                 fontSize: "10px",
                 padding: "5px 10px",
+                color: "#fff",
+                backgroundColor: "#7b00ff",
               }}
             >
               See All
@@ -55,10 +57,17 @@ const RightDiv = () => {
             <span className={styles.followerstitle}>Pending requests</span>
           </div>
           <Button
-            variant="contained"
-            endIcon={<CallMadeIcon fontSize="10px" color="action" />}
-            color="inherit"
-            style={{ borderRadius: "40px", fontSize: "10px" }}
+            variant="outlined"
+            endIcon={<CallMadeIcon fontSize="10px" color="#fff" />}
+            className={styles.seeAllBtn}
+            sx={{
+              borderRadius: "40px",
+              fontSize: "10px",
+              padding: "5px 10px",
+              color: "#fff",
+              backgroundColor: "#7b00ff",
+              fontWeight: "500",
+            }}
           >
             See All
           </Button>

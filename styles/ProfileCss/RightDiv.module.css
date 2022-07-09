@@ -78,3 +78,8 @@
 .reqImg{
     border-radius: 50%;
 }
+.seeAllBtn:hover{
+    background-color: #6c6c6c28;
+    color:rgb(0, 0, 0);
+    border: 1px solid #1f1f1f;
+}

@@ -29,6 +29,11 @@
     justify-content: center;
     overflow-y: scroll;
 }
+.seeAllBtn:hover{
+    background-color: #6c6c6c28;
+    color:rgb(0, 0, 0);
+    border: 1px solid #1f1f1f;
+}
 .allphotos::-webkit-scrollbar {
     margin-top: 10px;
     width: 2px;
